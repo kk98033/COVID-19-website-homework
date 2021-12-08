@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="styles/side_page.css">
+    <link rel="stylesheet" href="styles/top_bar.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/bottom_bar.css">
+</head>
+<body id="body" onmousedown="CloseSideClickingOuside(event)">
+    <!-- open side page btn -->
+    <div id="overlay"></div>
+    <div id="sidePageId" class="sidePage menu-item">
+        <a href="javascript:void(0)" class="closeBtn" onclick="CloseSidePage()">&times;</a>
+        <a href="taiwan-data.html">&#8250; 臺灣確診數據</a>
+        <a href="world-data.html">&#8250; 世界確診數據</a>
+        <a href="vaccine.html">&#8250; 疫苗介紹＆預約</a>
+        <a href="https://www.cdc.gov.tw/" target="_blank">&#8250; 疾管署網站</a>
+        <a href="https://www.who.int/" target="_blank">&#8250; 世界衛生組織網站</a>
+        <a href="video.html">&#8250; COVID-19相關影片</a>
+        <a href="game.html">&#8250; 小遊戲</a>
+    </div>
+    
+    <div id="topBar">
+        <a id="btn" style="margin-left: 10px;margin-top: 10px; cursor: pointer;" onclick="CheckState()"><div class="bar" id="bar" style="position: fixed; margin-left: 10px;"></div></a>
+        <div class="menu-item-home"><a href="index.html">Home</a></div>
+        <div class="menu-item-friends"><a href="about-us.html">About Us</a></div>
+        <div class="menu-item-about"><a href="donate.html">Donate</a></div>
+        <div class="dropdown" onmouseover="ShowDropdown()" onmouseout="CloseDropdown()">
+            <button class="dropbtn" onclick="ShowDropdown()">English
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content" id="myDropdown">
+                <a style="margin: 0; text-align: center;" href="#">Chinese</a>
+            </div>
+        </div> 
+    </div>
+
+    <section id="mainSection">
+        <h1>TITLE</h1>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
+    </section>
+    
+    <section id="mainSection">
+        <h1>TITLE</h1>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
+    </section>
+
+    <section id="mainSection">
+        <h1>TITLE</h1>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
+    </section>
+
+    <section id="mainSection">
+        <h1>TITLE</h1>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
+    </section>
+    <section id="mainSection">
+        <h1>TITLE</h1>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
+    </section>
+
+    <section class="bottom">
+        <div class="bottomText" style="padding-top: 0;"><b>Contact Me</b></div>
+        <div id="bottomTextHref">
+            <a href="mailto:a8829037@gmail.com" target="blank" class="bottomText" style="display: inline; padding-right: 10px;">Email</a>
+            <a href="https://github.com/kk98033" class="bottomText" target="blank" style="display: inline; padding-right: 10px;">GitHub</a>
+            <a href="https://www.youtube.com/channel/UCubeo2tni91PwEGC22a11Kg" class="bottomText" target="blank" style="display: inline; padding-right: 10px;">YouTube</a>
+            <a href="https://steamcommunity.com/id/IddleFromTaiwan/" class="bottomText" target="blank" style="display: inline; padding-right: 10px;">Steam</a>
+        </div>
+        <div class="bottomText" style="padding: 0;">所有圖片皆作為作業練習用途，均不屬於我</div>
+        <div class="bottomText">Copyright &#9400 2021 ChiaYuYang. All Rights Reserved</div>
+    </section>
+
+
+    <script src="JS/side_page.js"></script>
+    <script src="JS/top_bar.js"></script>
+</body>
+</html>

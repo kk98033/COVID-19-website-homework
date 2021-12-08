@@ -1,0 +1,22 @@
+.bottom{
+    /* position: absolute; */
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    background-color: rgb(16, 14, 20);
+}
+
+.bottomText{
+    font-size: 1.5vw;
+    padding-top: 15px;
+    
+    color: rgb(184, 174, 174);
+}
+
+#bottomTextHref a{
+    text-decoration:none;
+}
+
+#bottomTextHref a:hover{
+    color: gray;
+}
