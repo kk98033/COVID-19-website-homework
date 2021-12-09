@@ -1,18 +1,26 @@
-// Top bar appear when scroll down
-document.getElementById("body").addEventListener("scroll", ScrollFunction);
+const dropdown = document.getElementById("dropdown");
+const topBar = document.getElementById("topBar")
+// var dropDownContent = document.getElementById("dropdown").classList[0];
 
-document.getElementById("topBar").style.backgroundColor = " ";
+// Top bar appear when scroll down
+// document.getElementById("body").addEventListener("scroll", ScrollFunction);
+window.addEventListener("scroll", ScrollFunction);
+
 ShowTop();
+topBar.style.backgroundColor = "";
 
 var lastScroll = 0;
 function ScrollFunction(){
-    if (document.body.scrollTop < lastScroll){
+    if (document.documentElement.scrollTop === 0){
+        topBar.style.backgroundColor = "";
+    }
+    else if (document.documentElement.scrollTop < lastScroll){
         ShowTop();
     }
     else{
         HideTop();
     }
-    lastScroll = document.body.scrollTop;
+    lastScroll = document.documentElement.scrollTop;
 }
 
 function ShowTop(){
@@ -36,12 +44,11 @@ window.onclick = function(e) {
 }
 
 function ShowDropdown(){
-    document.getElementById("myDropdown").classList.toggle("show");
+    document.getElementById("dropdown").classList.toggle("show");
     
 }
 function CloseDropdown(){
-    var myDropdown = document.getElementById("myDropdown");
-    if (myDropdown.classList.contains('show')) {
-        myDropdown.classList.remove('show');
+    if (dropdown.classList.contains('show')) {
+        dropdown.classList.remove('show');
     }
 }

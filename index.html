@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="styles/top_bar.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/bottom_bar.css">
+    <link rel="stylesheet" href="styles/parallax_style.css">
+
+    <link rel="stylesheet" href="styles/main_page.css">
+    <!-- <link rel="stylesheet" href="styles/parallax_style.css"> -->
 
     <!-- Live 2D -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
@@ -30,8 +34,8 @@
         <a href="game.html">&#8250; 小遊戲</a>
     </div>
     
-    <div id="topBar">
-        <a id="btn" style="margin-left: 10px;margin-top: 10px; cursor: pointer;" onclick="CheckState()"><div class="bar" id="bar" style="position: fixed; margin-left: 10px;"></div></a>
+    <div id="topBar" style="z-index: 9999;">
+        <a id="btn" style="margin-left: 25px;margin-top: 10px; cursor: pointer;" onclick="CheckState()"><div class="bar" id="bar" style="position: fixed; margin-left: 10px;"></div></a>
         <div class="menu-item-home"><a href="index.html">Home</a></div>
         <div class="menu-item-friends"><a href="about-us.html">About Us</a></div>
         <div class="menu-item-about"><a href="donate.html">Donate</a></div>
@@ -39,53 +43,71 @@
             <button class="dropbtn" onclick="ShowDropdown()">English
               <i class="fa fa-caret-down"></i>
             </button>
-            <div class="dropdown-content" id="myDropdown">
+            <div class="dropdown-content" id="dropdown">
                 <a style="margin: 0; text-align: center;" href="#">Chinese</a>
             </div>
         </div> 
     </div>
 
-    <section id="mainSection">
-        <h1>TITLE</h1>
-        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
-        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
-        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
-        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
-        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
+    <header>
+        <!-- <nav>
+            <div class="container">
+                <h3 class="logo" style="position: fixed;">LOGO<span>LOGO NAME</span></h3>
+                <div class="menu">
+                    <div class="bar" style="position: fixed;"></div>
+                </div>
+            </div>
+        </nav> -->
+
+        <div class="downBtn translate" data-speed="0.1"><a href="#section1">&#8897</a></div>
+        <h1 class="bigTitle translate" data-speed="0.1">DAT BIG TITLE</h1>
+
+        <div class="backgroundImg"></div>
+    </header>
+
+    <section id="section1">
+        <div class="shadow"></div>
+
+        <div class="container">
+            <div class="content opacity">
+                <h3 class="title">
+                    <div class="border"></div>
+                </h3>
+                <p class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                    Eaque officiis quos expedita ipsa, a quidem inventore voluptates debitis 
+                    accusamus tenetur qui et voluptas dicta, culpa earum, doloribus odio consectetur 
+                    consequuntur soluta quasi nobis! Deserunt voluptatum reiciendis iure expedita 
+                    sequi quisquam laboriosam temporibus exercitationem.</p>
+            </div>
+
+            <div class="imgContainer opacity">
+                <img src="images/img3.png" alt="mid">
+            </div>
+        </div>
     </section>
-    
-    <section id="mainSection">
-        <h1>TITLE</h1>
-        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
-        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
-        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
-        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
-        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
-        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
+    <!-- <section class="parallaxContainer">
+        <div class="parallax" data-parallax="scroll" data-z-index="1" data-image-src="images/img3.png">
+            <p class="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quia tempora, neque exercitationem, dolorem delectus perferendis iure rem harum vero ea temporibus voluptatem eum fuga reiciendis facilis, ullam libero aperiam.</p>
+        </div>  
+    </section> -->
+
+    <section id="section2" class="backgroundIng" style="font-size: 50px; text-align: center; color: white; height: 100%;">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae vero enim, nisi voluptatum magni hic doloremque accusamus asperiores? Culpa adipisci ut tempora laudantium nihil ea porro! Amet nobis voluptas quae.</p>    
+    </section>
+
+    </section>
+    <!-- <section class="parallaxContainer">
+        <div class="parallax" data-parallax="scroll" data-z-index="1" data-image-src="img2.jpg">
+            <p class="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quia tempora, neque exercitationem, dolorem delectus perferendis iure rem harum vero ea temporibus voluptatem eum fuga reiciendis facilis, ullam libero aperiam.</p>
+        </div>  
+    </section> -->
+
+    <section id="section3" class="backgroundIng" style="font-size: 50px; text-align: center; color: white; height: 100%;">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae vero enim, nisi voluptatum magni hic doloremque accusamus asperiores? Culpa adipisci ut tempora laudantium nihil ea porro! Amet nobis voluptas quae.</p>    
     </section>
 
     <section id="mainSection">
         <h1>TITLE</h1>
-        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
-        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
-        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
-        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
-        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
-        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
-    </section>
-
-    <section id="mainSection">
-        <h1>TITLE</h1>
-        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
-        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
-        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
-        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
-        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
-        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
-    </section>
-    <section id="mainSection">
-        <h1>TITLE</h1>
-        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
         <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
         <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
         <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
@@ -107,6 +129,11 @@
 
     <!-- Live 2D -->
     <script src="live2d-widget-master_2/autoload.js"></script>
+
+    <!-- Parallax -->
+    <!-- <script src="JS/parallax.js"></script> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
+    <script src="JS/script.js"></script>
 
     <script src="JS/side_page.js"></script>
     <script src="JS/top_bar.js"></script>
