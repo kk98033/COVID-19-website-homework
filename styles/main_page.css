@@ -16,7 +16,7 @@ body{
 
 
 .backgroundImg{
-    background-image: url("img2.jpg");
+    background-image: url("images/img2.jpg");
     height: 100%;
     background-size: cover;
     background-position: center;
