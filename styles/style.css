@@ -14,13 +14,15 @@ html, body{
 .section{
     background-color: black;
     color: white;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 60px;    
     padding-top: 50px;
 }
 
 .fullHeight{
     background-color: black;
     color: white;
-    padding-top: 50px;
     height: 100%;
 }
 
@@ -45,6 +47,7 @@ html, body{
 /* Circle Image */
 .circleImgContainer{
     text-align: center;
+    padding-bottom: 50px;
 }
 
 .circleImgContainer a{
