@@ -6,9 +6,6 @@
 		"selector": "#waifu-tool .fa-comment",
 		"text": ["猜猜我要說些什麼？", "我從青蛙王子那裡聽到不少人生經驗。"]
 	}, {
-		"selector": "#main",
-		"text": ["測試測試？", "You are not tired, you just need some coffee。"]
-	}, {
 		"selector": "#waifu-tool .fa-paper-plane",
 		"text": ["要不要來玩飛機大戰？", "這個按鈕上面寫著「不要點擊」。", "怎麼，你想和我玩個遊戲？", "聽說這樣可以蹦迪！"]
 	}, {
@@ -35,6 +32,9 @@
 	}, {
 		"selector": ".menu-item-home a",
 		"text": ["點擊前往首頁，想回到上一頁可以使用瀏覽器的後退功能喔。", "點他就可以回到首頁啦！", "回首頁看看吧。"]
+	}, {
+		"selector": ".menu-switch-language",
+		"text": ["點擊這裡可以切換語言喔～", "可以切換中文或英文喔"]
 	}, {
 		"selector": ".menu-item-about a",
 		"text": ["你想知道我家主人是誰嗎？", "這裡有一些關於我家主人的秘密喔，要不要看看呢？", "發現主人出沒地點！"]

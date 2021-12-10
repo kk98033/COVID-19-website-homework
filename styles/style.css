@@ -11,8 +11,81 @@ html, body{
     font-family: 'Poppins', sans-serif;
 }
 
-#mainSection{
+.section{
     background-color: black;
     color: white;
     padding-top: 50px;
+}
+
+.fullHeight{
+    background-color: black;
+    color: white;
+    padding-top: 50px;
+    height: 100%;
+}
+
+.underLine{
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background-color: #fff;
+    /* bottom: 30px; */
+    left: 25%;
+}
+
+.pageTitle{
+    position: relative;
+    padding-bottom: 90px;
+
+    font-size: 50px;
+    text-align: center;
+    color: rgb(0, 255, 255);
+}
+
+/* Circle Image */
+.circleImgContainer{
+    text-align: center;
+}
+
+.circleImgContainer a{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    width: 400px;
+}
+
+.circleImg{
+    border-radius: 50%;
+    padding: 50px;
+}
+
+.backgroundText{
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: white; 
+    text-transform: uppercase; 
+    text-align: center;  
+    backface-visibility: hidden; 
+    white-space: pre-line;
+    width: 80%;
+    height: 80%;
+    background-color: rgba(0,0,0, 0.6);
+    border-radius: 50%;
+    display: none;
+    
+    font-size: 1.7rem; 
+    padding-top: 60px;
+}
+
+.circleImgContainer a:hover .backgroundText{
+    display: block;
+}
+
+.shape{
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%); 
+    position: relative; 
 }
