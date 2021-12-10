@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COVID-19</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <script src="https://kit.fontawesome.com/c480c03de3.js" crossorigin="anonymous"></script>
     
     <link rel="stylesheet" href="styles/side_page.css">
     <link rel="stylesheet" href="styles/top_bar.css">
@@ -25,13 +26,13 @@
     <div id="overlay"></div>
     <div id="sidePageId" class="sidePage menu-item">
         <a href="javascript:void(0)" class="closeBtn" onclick="CloseSidePage()">&times;</a>
+        <a href="https://www.cdc.gov.tw/" target="blank">&#8250; 疾管署網站</a>
+        <a href="https://www.who.int/" target="blank">&#8250; 世界衛生組織網站</a>
         <a href="taiwan-data.html">&#8250; 臺灣確診數據</a>
         <a href="world-data.html">&#8250; 世界確診數據</a>
         <a href="vaccine.html">&#8250; 疫苗介紹＆預約</a>
-        <a href="https://www.cdc.gov.tw/" target="_blank">&#8250; 疾管署網站</a>
-        <a href="https://www.who.int/" target="_blank">&#8250; 世界衛生組織網站</a>
-        <a href="video.html">&#8250; COVID-19相關影片</a>
         <a href="game.html">&#8250; 小遊戲</a>
+        <a href="video.html">&#8250; COVID-19相關影片</a>
     </div>
     
     <div id="topBar" style="z-index: 9999;">
@@ -40,7 +41,7 @@
         <div class="menu-item-friends"><a href="about-us.html">About Us</a></div>
         <div class="menu-item-about"><a href="donate.html">Donate</a></div>
         <div class="dropdown" onmouseover="ShowDropdown()" onmouseout="CloseDropdown()">
-            <button class="dropbtn" onclick="ShowDropdown()">English
+            <button class="dropbtn menu-switch-language" onclick="ShowDropdown()">English
               <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content" id="dropdown">
@@ -59,7 +60,9 @@
             </div>
         </nav> -->
 
-        <div class="downBtn translate" data-speed="0.1"><a href="#section1">&#8897</a></div>
+        <div class="downBtn translate" data-speed="0.1"><a style="opacity: .7;" href="#section1"><i class="fas fa-chevron-down"></i>
+
+        </a></div>
         <h1 class="bigTitle translate" data-speed="0.1">DAT BIG TITLE</h1>
 
         <div class="backgroundImg"></div>
@@ -91,10 +94,58 @@
         </div>  
     </section>
 
-    <section id="section2" class="backgroundIng" style="font-size: 50px; text-align: center; color: white; height: 100%;">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae vero enim, nisi voluptatum magni hic doloremque accusamus asperiores? Culpa adipisci ut tempora laudantium nihil ea porro! Amet nobis voluptas quae.</p>    
-    </section>
-
+    <section id="seciton2" class="section">
+        <div class="pageTitle">
+            <div>Title</div>
+            <div class="underLine"></div>
+        </div>
+        <div class="circleImgContainer">
+            <a href="#">
+                <figure class="shape">
+                    <img class="circleImg" src="images/abq85-sipj4 (1).gif" alt="">
+                    <figcaption class="backgroundText">aaaaaa</figcaption>
+                </figure>
+                <div class="">aaaa</div>
+            </a>
+            <a href="#">
+                <figure class="shape">
+                    <img class="circleImg" src="images/abq85-sipj4 (1).gif" alt="">
+                    <figcaption class="backgroundText">aaaaaa</figcaption>
+                </figure>
+                <div class="">aaaa</div>
+            </a>
+            <a href="#">
+                <figure class="shape">
+                    <img class="circleImg" src="images/abq85-sipj4 (1).gif" alt="">
+                    <figcaption class="backgroundText">aaaaaa</figcaption>
+                </figure>
+                <div class="">aaaa</div>
+            </a>
+        </div>
+    <section id="seciton3" class="fullHeight">
+        <div class="circleImgContainer">
+            <a href="#">
+                <figure class="shape">
+                    <img class="circleImg" src="images/abq85-sipj4 (1).gif" alt="">
+                    <figcaption class="backgroundText">aaaaaa</figcaption>
+                </figure>
+                <div class="">aaaa</div>
+            </a>
+            <a href="#">
+                <figure class="shape">
+                    <img class="circleImg" src="images/abq85-sipj4 (1).gif" alt="">
+                    <figcaption class="backgroundText">aaaaaa</figcaption>
+                </figure>
+                <div class="">aaaa</div>
+            </a>
+            <a href="#">
+                <figure class="shape">
+                    <img class="circleImg" src="images/abq85-sipj4 (1).gif" alt="">
+                    <figcaption class="backgroundText">aaaaaa</figcaption>
+                </figure>
+                <div class="">aaaa</div>
+            </a>
+        </div>
     </section>
     <section class="parallaxContainer">
         <div class="parallax" data-parallax="scroll" data-z-index="1" data-image-src="images/img2.jpg">
@@ -102,11 +153,7 @@
         </div>  
     </section>
 
-    <section id="section3" class="backgroundIng" style="font-size: 50px; text-align: center; color: white; height: 100%;">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae vero enim, nisi voluptatum magni hic doloremque accusamus asperiores? Culpa adipisci ut tempora laudantium nihil ea porro! Amet nobis voluptas quae.</p>    
-    </section>
-
-    <section id="mainSection">
+    <section class="section">
         <h1>TITLE</h1>
         <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
         <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
@@ -133,7 +180,7 @@
     <!-- Parallax -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="JS/parallax.js"></script>
-    <script src="JS/script.js"></script>
+    <script src="JS/main_page_script.js"></script>
 
     <script src="JS/side_page.js"></script>
     <script src="JS/top_bar.js"></script>
