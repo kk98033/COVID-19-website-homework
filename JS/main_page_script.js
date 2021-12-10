@@ -39,4 +39,9 @@ window.addEventListener('scroll', () => {
     if (scroll / (sectionY.top + sectionHeight) * 30 <= 530){
         border.style.width = `${scroll / (sectionY.top + sectionHeight) * 30}%`;
     }
+
+    if (border.style.width.replace('%', '') >= 100){
+        border.style.width = `0%`;
+        // border.style.width = `${scroll / (sectionY.top + sectionHeight) * 30 - 100}%`;
+    }
 })

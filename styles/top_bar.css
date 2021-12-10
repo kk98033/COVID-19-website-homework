@@ -1,4 +1,4 @@
-#topBar{
+.topBar{
     position: fixed;
     top: -50px;
     right: 0px;
@@ -9,7 +9,7 @@
 }
 
 /* top bar link */
-#topBar a{
+.topBar a{
     float: left;
     position: relative;
     color: white;
@@ -20,7 +20,7 @@
     display: block;
 }
 
-#topBar a:hover{
+.topBar a:hover{
     color: gray;
 }
 
@@ -46,19 +46,19 @@
 }
 
 /* Dropdown menu */  
-.dropdown {
-    margin-left: 500px;
+.dropdown{
     float: left;
     overflow: hidden;
+    margin-left: 50px;
 }
 
-.dropdown .dropbtn {
+.dropdown .dropbtn{
     cursor: pointer;
     font-size: 16px;  
     border: none;
     outline: none;
     color: white;
-    padding: 14px 16px;
+    padding: 15px;
     background-color: inherit;
     font-family: inherit;
     margin: 0;
@@ -73,11 +73,8 @@
     position: absolute;
     background-color: #222020;
     text-align: center;
-    /* min-width: 160px; */
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-
-
 }
   
 .dropdown-content a {
@@ -110,4 +107,31 @@
 
 .bar a:hover{
     color: gray;
+}
+
+@media screen and (max-width: 600px){
+    .topBar a{
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 15px;
+    }
+
+    .dropdown{
+        margin-left: 0px;
+    }
+
+    .dropdown .dropbtn{
+        font-size: 15px;
+    }    
+}
+
+@media screen and (max-width: 480px){
+    .topBar a{
+        margin-left: 10px;
+        font-size: 10px;
+    }
+
+    .dropdown .dropbtn{
+        font-size: 10px;
+    }
 }

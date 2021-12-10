@@ -1,6 +1,5 @@
 const dropdown = document.getElementById("dropdown");
 const topBar = document.getElementById("topBar")
-// var dropDownContent = document.getElementById("dropdown").classList[0];
 
 // Top bar appear when scroll down
 // document.getElementById("body").addEventListener("scroll", ScrollFunction);

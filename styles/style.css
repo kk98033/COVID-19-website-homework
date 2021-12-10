@@ -92,3 +92,29 @@ html, body{
     clip-path: circle(50% at 50% 50%); 
     position: relative; 
 }
+
+@media(max-width: 600px){
+    .circleImgContainer{
+        padding-bottom: 0;
+    }
+
+    .circleImgContainer a{
+        /* display: block; */
+        width: 250px;
+    }
+
+    .backgroundText{
+        width: 100%;
+        height: 100%;
+    }
+
+    .circleImg{
+        padding: 0px;
+    }
+}
+
+@media(max-width: 400px){
+    .circleImgContainer a{
+        width: 150px;
+    }
+}
