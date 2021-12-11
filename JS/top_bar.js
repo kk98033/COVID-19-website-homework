@@ -8,11 +8,13 @@ window.addEventListener("scroll", ScrollFunction);
 
 ShowTop();
 topBar.style.backgroundColor = "";
+backToTop.style.opacity = "0";
 
 var lastScroll = 0;
 function ScrollFunction(){
     if (document.documentElement.scrollTop === 0){
         topBar.style.backgroundColor = "";
+        backToTop.style.opacity = "0";
     }
     else if (document.documentElement.scrollTop < lastScroll){
         ShowTop();
