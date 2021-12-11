@@ -166,7 +166,7 @@ h1::after{
     }
     
     .taiwan-map{
-        height:80vh
+        height:50vh
     }
     
     .shop-list{
@@ -182,6 +182,15 @@ h1::after{
     }
     .text{
         padding-left: 10px;
-        font-size: 1px;
+        font-size: 5px;
     }
+
+    /* .colorBar{
+        width: 5px;
+        height: 5px;
+    } */
+
+    /* .colorChart{
+        width: 10%;
+    } */
 }
