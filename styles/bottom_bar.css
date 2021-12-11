@@ -19,3 +19,9 @@
 #bottomTextHref a:hover{
     color: gray;
 }
+
+@media(max-width: 600px){
+    .bottomText{
+        font-size: 15px;
+    }
+}
