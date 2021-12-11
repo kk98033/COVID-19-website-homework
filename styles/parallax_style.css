@@ -27,3 +27,9 @@ body
     position: relative;
     color: rgb(32, 93, 223);
 }
+
+@media(max-width: 600px){
+    .parallax{
+        padding: 50px 35px;
+    }
+}

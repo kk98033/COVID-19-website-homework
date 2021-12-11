@@ -11,6 +11,10 @@ html, body{
     font-family: 'Poppins', sans-serif;
 }
 
+h1{
+    font-size: 50px;
+}
+
 .section{
     background-color: black;
     color: white;
@@ -18,6 +22,23 @@ html, body{
     padding-right: 100px;
     padding-bottom: 60px;    
     padding-top: 50px;
+    text-align: center;
+}
+
+.backToTop{
+    position:fixed;
+    padding: 20px;
+    right: 0;
+    bottom: 50%;
+    cursor: pointer;
+    color: white;
+    border-radius: 4px;
+    background-color: rgba(109, 5, 109, 0.6);
+    z-index: 99999;
+    text-decoration: none;
+
+    opacity: 1;
+    transition: opacity .5s;
 }
 
 .fullHeight{
@@ -44,7 +65,7 @@ html, body{
     color: rgb(0, 255, 255);
 }
 
-/* Circle Image */
+/* #region Circle Image */
 .circleImgContainer{
     text-align: center;
     padding-bottom: 50px;
@@ -93,28 +114,98 @@ html, body{
     position: relative; 
 }
 
+.description{
+    white-space: pre-line;
+    padding-bottom: 100px;
+}
+/* #endregion */
+
+/* #region Profile */
+.profileContainer{
+    text-align: left;
+    white-space: pre-line;
+    padding-bottom: 100px;
+}
+
+.roundImage{
+    border-radius: 20%;
+    width: 30%;
+    float: right;
+}
+
+.profileText{
+    margin-top: -50px;
+    width: 100px;
+    font-size: 30px;
+}
+
+.socialMediaContainer{
+    position: relative;
+    text-align: center;
+}
+
+.socialMediaContainer a{
+    margin: 10px;
+    width: 100px;
+    display: inline-block;
+}
+
+.socialMediaContainer a:hover{
+    width: 130px;
+}
+
+.socialMediaImg{
+    border-radius: 50%;
+    width: 90%;
+}
+
+/* #endregion */
+
 @media(max-width: 600px){
-    .circleImgContainer{
-        padding-bottom: 0;
+    .section{
+        padding-left: 50px;
+        padding-right: 50px;
     }
 
     .circleImgContainer a{
-        /* display: block; */
-        width: 250px;
-    }
-
-    .backgroundText{
-        width: 100%;
-        height: 100%;
+        width: 300px;
     }
 
     .circleImg{
         padding: 0px;
     }
+    
+    .backgroundText{
+        width: 100%;
+        height: 100%;
+    }
+    
+    
+    /* #region Profile */
+    
+    .roundImage{
+        float: none;
+        width: 100%;
+    }
+    
+    .socialMediaContainer a{
+        margin: 10px;
+        width: 80px;
+    }
+
+    .socialMediaContainer a:hover{
+        width: 100px;
+    }
+
+    .socialMediaContainer a{
+        margin: 0;
+    }
+    /* #endregion */
 }
 
 @media(max-width: 400px){
     .circleImgContainer a{
         width: 150px;
     }
+
 }
