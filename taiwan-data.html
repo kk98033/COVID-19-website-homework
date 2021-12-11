@@ -12,8 +12,11 @@
     <link rel="stylesheet" href="styles/side_page.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/bottom_bar.css">
+    <link rel="stylesheet" href="styles/title_page.css">
 
     <link rel="stylesheet" href="TW_map/augurio-taiwan.min.css">
+    <link rel="stylesheet" href="styles/parallax_style.css">
+    <link rel="stylesheet" href="styles/news.css">
 
     <!-- Live 2D -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
@@ -46,13 +49,34 @@
         </div> 
     </div>
 
-    <section class="section">
-        <h1>TITLE</h1>
-        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
-        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
-        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
-        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
-        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aperiam minima in libero eum optio vero unde eos natus. Velit voluptatum qui id ullam porro quae error assumenda illum temporibus!</div>
+    <a class="backToTop" id="backToTop" href="#head">Top</a>
+    
+    <header id="head">
+        <div class="bigTitle">
+            <div>Title</div>
+            <!-- <div class="headerUnderLine"></div> -->
+            <div class="downBtn translate" data-speed="0.1"><a style="opacity: .7;" href="#section1"><i class="fas fa-chevron-down"></i></a></div>
+        </div>
+        <div class="TWbackgroundImg"></div>
+    </header>
+
+    <div class="fullHeight" id="section1">
+        <h3 class="pageTitle">
+            <div>TITLE</div>
+            <div class="underLine"></div>
+        </h3>
+        <div class="shadow"></div>
+        <div id="newsContainer" class="newsContainer">
+            <a class="prev" onclick="PlusSlides(-1)">❮</a>
+            <a class="next" onclick="PlusSlides(1)">❯</a>
+        </div>
+        <div id="dotContainer" class="dotContainer">
+        </div>
+    </div>
+
+    <section class="parallaxContainer">
+        <div class="parallax" data-parallax="scroll" data-z-index="1" data-image-src="images/img2.jpg"></div>  
+        <!-- <div class="parallax" data-parallax="scroll" data-z-index="1" style="background-image: url(images/img2.jpg)" ></div>   -->
     </section>
 
     <div class="container" id="app">
@@ -127,11 +151,18 @@
     <script src="JS/side_page.js"></script>
     <script src="JS/top_bar.js"></script>
 
+    <!-- Parallax -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="JS/parallax.js"></script>
+
     <!-- Taiwan map -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.6.0/polyfill.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js"></script>
     <script src="//d3js.org/d3.v3.min.js"></script>
     <script src="TW_map/taiwan_map.js"></script>
+
+    <!-- Create News -->
+    <script src="JS/create_news.js"></script>
 
     <!--Firebase Libraries-->
     <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
@@ -168,14 +199,9 @@
                 var value = childSnapshot.val()
                 var key = childSnapshot.key
                 twDic[key] = value
-                // console.log(key, value)
             });
-            console.log(twDic)
             localStorage.setItem("twDic", JSON.stringify(twDic)); // save data
         });
-        // console.log(twDic['嘉義縣']);
-        // console.log(twDic);
-        // console.log(Object.keys(twDic)[0]);
         
         var newDic = {}
         database.ref("News/").once('value', snapshot => {
@@ -183,13 +209,13 @@
                 var value = childSnapshot.val()
                 var key = childSnapshot.key
                 newDic[key] = value
-                // console.log(key, value)
             });
+            NewsCreate(newDic);
+            console.log(newDic);
+            localStorage.setItem("newDic", newDic); // save data
         });
-        console.log(newDic);
-        localStorage.setItem("newDic", newDic); // save data
-
-        // alert(newDic)
     </script>
+
+
 </body>
 </html>
