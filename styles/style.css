@@ -11,6 +11,10 @@ html, body{
     font-family: 'Poppins', sans-serif;
 }
 
+#worldTable{
+    overflow: auto;
+}
+
 h1{
     font-size: 50px;
 }
@@ -61,7 +65,7 @@ h1{
 
 .pageTitle{
     position: relative;
-    padding-bottom: 90px;
+    padding-bottom: 20px;
 
     font-size: 50px;
     text-align: center;
