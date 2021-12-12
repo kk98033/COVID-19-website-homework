@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19</title>
+
+    <script src="https://kit.fontawesome.com/c480c03de3.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="styles/top_bar.css">
+    <link rel="stylesheet" href="styles/side_page.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/bottom_bar.css">
+    <link rel="stylesheet" href="styles/title_page.css">
+    
+    <link rel="stylesheet" href="styles/parallax_style.css">
+
+    <!-- Live 2D -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+</head>
+<body id="body" onmousedown="CloseSideClickingOuside(event)">
+    <div id="overlay"></div>
+    <div id="sidePageId" class="sidePage menu-item">
+        <a href="javascript:void(0)" class="closeBtn" onclick="CloseSidePage()">&times;</a>
+        <a href="https://www.cdc.gov.tw/" target="blank">&#8250; 疾管署網站</a>
+        <a href="https://www.who.int/" target="blank">&#8250; 世界衛生組織網站</a>
+        <a href="taiwan-data.html">&#8250; 臺灣確診數據</a>
+        <a href="world-data.html">&#8250; 世界確診數據</a>
+        <a href="vaccine.html">&#8250; 疫苗介紹＆預約</a>
+        <a href="game.html">&#8250; 小遊戲</a>
+        <a href="video.html">&#8250; COVID-19相關影片</a>
+    </div>
+    
+    <div id="topBar" class="topBar" style="z-index: 9999;">
+        <a id="btn" style="margin-left: 25px;margin-top: 20px; margin-right: 40px; cursor: pointer;" onclick="CheckState()"><div class="bar" id="bar" style="position: fixed; margin-left: 10px;"></div></a>
+        <div class="menu-item-home"><a href="index.html">Home</a></div>
+        <div class="menu-item-friends"><a href="about-us.html">About Us</a></div>
+        <div class="menu-item-about"><a href="donate.html">Donate</a></div>
+        <div class="dropdown" onmouseover="ShowDropdown()" onmouseout="CloseDropdown()">
+            <button class="dropbtn menu-switch-language" onclick="ShowDropdown()">English
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content" id="dropdown">
+                <a style="margin: 0; text-align: center;" href="#">Chinese</a>
+            </div>
+        </div> 
+    </div>
+
+    <header id="head">
+        <div class="bigTitle">
+            <div>Title</div>
+            <div class="downBtn translate" data-speed="0.1"><a style="opacity: .7;" href="#section1"><i class="fas fa-chevron-down"></i></a></div>
+        </div>
+        <div class="TWbackgroundImg"></div>
+    </header>
+
+    <section class="bottom">
+        <div class="bottomText" style="padding-top: 0;"><b>Contact Me</b></div>
+        <div id="bottomTextHref">
+            <a href="mailto:a8829037@gmail.com" target="blank" class="bottomText" style="display: inline; padding-right: 10px;">Email</a>
+            <a href="https://github.com/kk98033" class="bottomText" target="blank" style="display: inline; padding-right: 10px;">GitHub</a>
+            <a href="https://www.youtube.com/channel/UCubeo2tni91PwEGC22a11Kg" class="bottomText" target="blank" style="display: inline; padding-right: 10px;">YouTube</a>
+            <a href="https://steamcommunity.com/id/IddleFromTaiwan/" class="bottomText" target="blank" style="display: inline; padding-right: 10px;">Steam</a>
+        </div>
+        <div class="bottomText" style="padding: 0;">所有圖片皆作為作業練習用途，均不屬於我</div>
+        <div class="bottomText">Copyright &#9400 2021 ChiaYuYang. All Rights Reserved</div>
+    </section>
+
+    <!-- Live 2D -->
+    <script src="live2d-widget-master_2/autoload.js"></script>
+
+    <!-- Parallax -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="JS/parallax.js"></script>
+
+    <!-- Stander page item -->
+    <script src="JS/side_page.js"></script>
+    <script src="JS/top_bar.js"></script>
+</body>
+</html>
