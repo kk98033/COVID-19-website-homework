@@ -6,7 +6,7 @@ function tableCreate(){
     
     tbl = document.createElement('table');
     if(width <= 600){
-        tbl.style.fontSize = '10px';
+        tbl.style.fontSize = '15px';
     }else{
         tbl.style.fontSize = '20px';
     }
