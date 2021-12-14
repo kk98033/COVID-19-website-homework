@@ -36,8 +36,14 @@
 		"selector": ".menu-switch-language",
 		"text": ["點擊這裡可以切換語言喔～", "可以切換中文或英文喔"]
 	}, {
+		"selector": ".menu-toggle-darkmode",
+		"text": ["可以切換深色模式/淺色模式喔～", "Don't use light mode!!!! Because light attracts bugs"]
+	}, {
 		"selector": ".menu-item-about a",
 		"text": ["你想知道我家主人是誰嗎？", "這裡有一些關於我家主人的秘密喔，要不要看看呢？", "發現主人出沒地點！"]
+	}, {
+		"selector": ".back-to-top a",
+		"text": ["點它就可以直接回到頁首啦！", "如果你懶的往上滑就點他啦！"]
 	}, {
 		"selector": ".menu-item-tags a",
 		"text": ["點擊就可以看文章的標籤啦！", "點擊來查看所有標籤喔。"]
@@ -82,7 +88,7 @@
 		"text": ["代碼可直接點擊複製喔。"]
 	}, {
 		"selector": ".highlight .table-container, .gist",
-		"text": ["GitHub！我是新手！", "PHP 是最好的語言（嗎？）！"]
+		"text": ["GitHub！我是新手！"]
 	}, {
 		"selector": "a[href^='mailto']",
 		"text": ["郵件我會即時回覆的！", "點擊就可以發送郵件啦～"]
