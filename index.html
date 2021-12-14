@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="styles/side_page.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/bottom_bar.css">
+    <link rel="stylesheet" href="styles/toggle.css">
     
     <link rel="stylesheet" href="styles/main_page.css">
     <link rel="stylesheet" href="styles/parallax_style.css">
@@ -30,10 +31,13 @@
         <a href="vaccine.html">&#8250; 疫苗介紹＆預約</a>
         <a href="game.html">&#8250; 小遊戲</a>
         <a href="video.html">&#8250; COVID-19相關影片</a>
+        <a href="reference.html">&#8250; 參考資料</a>
     </div>
     
     <div id="topBar" class="topBar" style="z-index: 9999;">
-        <a id="btn" style="margin-left: 25px;margin-top: 20px; margin-right: 40px; cursor: pointer;" onclick="CheckState()"><div class="bar" id="bar" style="position: fixed; margin-left: 10px;"></div></a>
+        <div class="menu-item-categories">
+            <a id="btn" style="margin-left: 25px;margin-top: 20px; margin-right: 40px; cursor: pointer;" onclick="CheckState()"><div class="bar" id="bar" style="position: fixed; margin-left: 10px;"></div></a>
+        </div>
         <div class="menu-item-home"><a href="index.html">Home</a></div>
         <div class="menu-item-friends"><a href="about-us.html">About Us</a></div>
         <div class="menu-item-about"><a href="donate.html">Donate</a></div>
@@ -44,10 +48,16 @@
             <div class="dropdown-content" id="dropdown">
                 <a style="margin: 0; text-align: center;" href="#">Chinese</a>
             </div>
-        </div> 
+        </div>
+        <label class="switch menu-toggle-darkmode">
+            <input type="checkbox">
+            <span class="switchSlider round menu-toggle-darkmode"></span>
+        </label> 
     </div>
 
-    <a class="backToTop" id="backToTop" href="#head">Top</a>
+    <div class="back-to-top">
+        <a class="backToTop" id="backToTop" href="#head">Top</a>
+    </div>
 
     <header id="head">
         <div class="downBtn translate" data-speed="0.1"><a style="opacity: .7;" href="#section1"><i class="fas fa-chevron-down"></i></a></div>
@@ -89,42 +99,42 @@
         <div class="circleImgContainer">
             <a href="taiwan-data.html">
                 <figure class="shape">
-                    <img class="circleImg" src="images/abq85-sipj4 (1).gif" alt="">
+                    <img class="circleImg" src="images/testimg.jpg" alt="">
                     <figcaption class="backgroundText">Taiwan Data</figcaption>
                 </figure>
                 <div class="">Taiwan Data</div>
             </a>
             <a href="world-data.html">
                 <figure class="shape">
-                    <img class="circleImg" src="images/abq85-sipj4 (1).gif" alt="">
+                    <img class="circleImg" src="images/testimg.jpg" alt="">
                     <figcaption class="backgroundText">World Data</figcaption>
                 </figure>
                 <div class="">World Data</div>
             </a>
             <a href="vaccine.html">
                 <figure class="shape">
-                    <img class="circleImg" src="images/abq85-sipj4 (1).gif" alt="">
+                    <img class="circleImg" src="images/testimg.jpg" alt="">
                     <figcaption class="backgroundText">Vaccine</figcaption>
                 </figure>
                 <div class="">Vaccine</div>
             </a>
             <a href="video.html">
                 <figure class="shape">
-                    <img class="circleImg" src="images/abq85-sipj4 (1).gif" alt="">
+                    <img class="circleImg" src="images/testimg.jpg" alt="">
                     <figcaption class="backgroundText">Video</figcaption>
                 </figure>
                 <div class="">Video</div>
             </a>
             <a href="game.html">
                 <figure class="shape">
-                    <img class="circleImg" src="images/abq85-sipj4 (1).gif" alt="">
+                    <img class="circleImg" src="images/testimg.jpg" alt="">
                     <figcaption class="backgroundText">Game</figcaption>
                 </figure>
                 <div class="">Game</div>
             </a>
             <a href="about-us.html">
                 <figure class="shape">
-                    <img class="circleImg" src="images/abq85-sipj4 (1).gif" alt="">
+                    <img class="circleImg" src="images/testimg.jpg" alt="">
                     <figcaption class="backgroundText">About Us</figcaption>
                 </figure>
                 <div class="">About Us</div>
@@ -134,7 +144,7 @@
 
     <section class="bottom">
         <div class="bottomText" style="padding-top: 0;"><b>Contact Me</b></div>
-        <div id="bottomTextHref">
+        <div id="bottomTextHref" class="gist">
             <a href="mailto:a8829037@gmail.com" target="blank" class="bottomText" style="display: inline; padding-right: 10px;">Email</a>
             <a href="https://github.com/kk98033" class="bottomText" target="blank" style="display: inline; padding-right: 10px;">GitHub</a>
             <a href="https://www.youtube.com/channel/UCubeo2tni91PwEGC22a11Kg" class="bottomText" target="blank" style="display: inline; padding-right: 10px;">YouTube</a>
