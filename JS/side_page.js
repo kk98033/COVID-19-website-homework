@@ -31,8 +31,8 @@ function CloseSidePage(){
 // Hide side page when click ouside the page
 function CloseSideClickingOuside(e){
     var targetId = GetSectionElementId(e);
-    
-    if (targetId != "sidePageId" && targetId != "btn"){
+    // console.log(targetId)
+    if (targetId != "sidePageId" && targetId != "btn" && targetId != ""){
         CloseSidePage();
     }
 }
