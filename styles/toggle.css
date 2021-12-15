@@ -71,6 +71,10 @@ input:checked + .switchSlider:before{
         left: 2px;
         bottom: 2px;
     }
+
+    input:checked + .switchSlider:before{
+        transform: translateX(13px);
+    }
 }
 
 @media screen and (max-width: 350px){

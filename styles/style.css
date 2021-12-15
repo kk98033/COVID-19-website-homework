@@ -127,6 +127,7 @@ h1{
 }
 /* #endregion */
 
+
 /* #region Profile */
 .profileContainer{
     text-align: left;
@@ -167,6 +168,21 @@ h1{
 }
 
 /* #endregion */
+
+
+/* #region Video */
+.videoContainer{
+    text-align: center;
+}
+
+.video{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 60px;
+    /* width: 1000px; */
+}
+/* #endregion */
+
 
 @media(max-width: 600px){
     .fullHeight{
@@ -215,9 +231,17 @@ h1{
     /* #endregion */
 }
 
+
+/* #region Github Card */
+.github-card{
+    /* display: inline-block; */
+    /* width: 10px; */
+}
+/* #endregion */
+
 @media(max-width: 400px){
     .circleImgContainer a{
         width: 150px;
     }
-
+    
 }
