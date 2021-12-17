@@ -69,7 +69,22 @@
             <div>Title</div>
             <div class="underLine"></div>
         </div>
-        <div id="dual_x_div" style="width: 900px; height: 500px;"></div>
+        <div class="chartContainer">
+            <div id="total-data-chart" class="chart"></div>
+            <div id="chartCityId">City</div>
+            <div id="cityChart1" class="chart"></div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iste sapiente ullam laboriosam deleniti blanditiis id alias nam facilis totam reiciendis, ipsum illum dignissimos? Laborum voluptatibus asperiores quis deleniti id.</div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iste sapiente ullam laboriosam deleniti blanditiis id alias nam facilis totam reiciendis, ipsum illum dignissimos? Laborum voluptatibus asperiores quis deleniti id.</div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iste sapiente ullam laboriosam deleniti blanditiis id alias nam facilis totam reiciendis, ipsum illum dignissimos? Laborum voluptatibus asperiores quis deleniti id.</div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iste sapiente ullam laboriosam deleniti blanditiis id alias nam facilis totam reiciendis, ipsum illum dignissimos? Laborum voluptatibus asperiores quis deleniti id.</div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iste sapiente ullam laboriosam deleniti blanditiis id alias nam facilis totam reiciendis, ipsum illum dignissimos? Laborum voluptatibus asperiores quis deleniti id.</div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iste sapiente ullam laboriosam deleniti blanditiis id alias nam facilis totam reiciendis, ipsum illum dignissimos? Laborum voluptatibus asperiores quis deleniti id.</div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iste sapiente ullam laboriosam deleniti blanditiis id alias nam facilis totam reiciendis, ipsum illum dignissimos? Laborum voluptatibus asperiores quis deleniti id.</div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iste sapiente ullam laboriosam deleniti blanditiis id alias nam facilis totam reiciendis, ipsum illum dignissimos? Laborum voluptatibus asperiores quis deleniti id.</div>
     </section>
 
 
@@ -96,34 +111,152 @@
     <script src="JS/side_page.js"></script>
     <script src="JS/top_bar.js"></script>
 
+    <!--Firebase Libraries-->
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script> 
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+        
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyB_xpBdbHpt-apQ8ZXl2lgDb5wlE5GU7BE",
+            authDomain: "covid-19-website-b68f9.firebaseapp.com",
+            databaseURL: "https://covid-19-website-b68f9-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "covid-19-website-b68f9",
+            storageBucket: "covid-19-website-b68f9.appspot.com",
+            messagingSenderId: "631482638390",
+            appId: "1:631482638390:web:42c2a2b67917ec69dcb897",
+            measurementId: "G-VCQ5PVZM5R"
+        };
+        
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        var database = firebase.database();
+
+        /* Heheehe I will make your brain explode:) */
+        var vaccineDic = {};
+        var totalData = [['Gerne', '第一劑', '第二劑', '第三劑', { role: 'annotation' } ]];
+        var allCityData = {};
+        database.ref("Vaccine/").once('value', snapshot => {
+            snapshot.forEach(childSnapshot => {
+                let value = childSnapshot.val()
+                let key = childSnapshot.key
+                vaccineDic[key] = value
+
+                totalData.push(OrganizeAllData(key, value))
+                allCityData[key] = OrgainizeCityData(key, value)
+            });
+            console.log(totalData);
+            console.log(allCityData);
+            
+            google.charts.setOnLoadCallback(DrawStuff(totalData, allCityData, 'total-data-chart', 0));
+            google.charts.setOnLoadCallback(DrawStuff(totalData, allCityData['全國'], 'cityChart1', 1));
+            ShowChartText('全國');
+        });
+        
+        function OrganizeAllData(key, value){
+            let allData = [key];
+            allData = allData.concat(value["總計"].concat(['']));
+            
+            return allData;
+        }
+        
+        function OrgainizeCityData(key, value){
+            let cityData = [[key, '第一劑', '第二劑', '第三劑']];
+            cityData.push(
+                ["12-17歲", value["12-17歲"][0]].concat(value["12-17歲"][1]).concat(value["12-17歲"][2])
+            );
+            cityData.push(
+                ["18-29歲", value["18-29歲"][0]].concat(value["18-29歲"][1]).concat(value["18-29歲"][2])
+            );
+            cityData.push(
+                ["30-49歲", value["30-49歲"][0]].concat(value["30-49歲"][1]).concat(value["30-49歲"][2])
+            );
+            cityData.push(
+                ["50-64歲", value["50-64歲"][0]].concat(value["50-64歲"][1]).concat(value["50-64歲"][2])
+            );
+            cityData.push(
+                ["50-64歲", value["50-64歲"][0]].concat(value["50-64歲"][1]).concat(value["50-64歲"][2])
+            );
+            cityData.push(
+                ["50-64歲", value["50-64歲"][0]].concat(value["50-64歲"][1]).concat(value["50-64歲"][2])
+            );
+
+            return cityData;
+        }
+    </script>
+
     <!-- Google Chart -->
+    <script type="text/javascript"src='https://www.gstatic.com/charts/loader.js'></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-        <script type="text/javascript">
+    <script type="text/javascript">
         google.charts.load('current', {'packages':['bar']});
         google.charts.load("current", {'packages': ["corechart"]});
-        google.charts.setOnLoadCallback(drawStuff);
 
-        function drawStuff() {
-            var data = google.visualization.arrayToDataTable([
-                ['Genre', 'Fantasy & Sci Fi', 'Romance', 'Mystery/Crime', 'General',
-                'Western', 'Literature', { role: 'annotation' } ],
-                ['2010', 10, 24, 20, 32, 18, 5, ''],
-                ['2020', 16, 22, 23, 30, 16, 9, ''],
-                ['2030', 28, 19, 29, 30, 12, 13, '']
-            ]);
-
-            var options = {
-                width: 600,
-                height: 400,
-                legend: { position: 'top', maxLines: 3 },
-                bar: { groupWidth: '75%' },
-                isStacked: true
-            };
+        function DrawStuff(totalData, allCityData, id, type){
+            if(type === 0){
+                var data1 = google.visualization.arrayToDataTable(totalData);
     
-            // var chart = new google.charts.Bar(document.getElementById('dual_x_div'));
-            var chart = new google.visualization.BarChart(document.getElementById('dual_x_div'))
-            chart.draw(data, options);
-        };
+                var options1 = {
+                    // width: 1200,
+                    // height: 800,
+                    title: '疫苗接種率',
+                    subtitle: '個別縣市',
+                    legend: { position: 'top', maxLines: 4 },
+                    bar: { groupWidth: '80%' },
+                    isStacked: true,
+
+                    backgroundColor: { fill:'transparent' },
+                    titleTextStyle: {color: 'white'},
+                };
+                
+                var chart1 = new google.visualization.BarChart(document.getElementById(id))
+                chart1.draw(data1, options1);
+                
+                var selectHandler = function(e){
+                    var selectedItem = chart1.getSelection()[0];
+                    if(selectedItem){
+                        var selectedValue = data1.getValue(selectedItem.row, 0);
+                        console.log(allCityData[selectedValue]);
+                        google.charts.setOnLoadCallback(DrawStuff(totalData, allCityData[selectedValue], 'cityChart1', 1));
+                        ShowChartText(selectedValue);
+                    }
+                }
+                
+                google.visualization.events.addListener(chart1, 'click', selectHandler);
+                
+            }else if(type === 1){
+                var data2 = google.visualization.arrayToDataTable(allCityData);
+                var options2 = {
+                    title: '疫苗接種率',
+                    subtitle: '時間',
+                    
+                    backgroundColor: { fill:'transparent' },
+                    titleTextStyle: {color: 'white'},
+                    // textStyle:{color: '0x000'}
+                    chartArea: {
+                        backgroundColor: 'transparent',
+                    },
+                };
+        
+                var chart2 = new google.charts.Bar(document.getElementById(id));
+                chart2.draw(data2, google.charts.Bar.convertOptions(options2));
+            }
+        }
+    </script>
+    <script>
+        function ShowChartText(cityName){
+            let text = document.getElementById("chartCityId");
+
+            text.textContent = cityName;
+            text.style.display = 'block';
+        }
     </script>
 </body>
 </html>
