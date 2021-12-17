@@ -64,15 +64,33 @@
         <div class="TWbackgroundImg"></div>
     </header>
 
+    <section class="section" id="section1">
+        <div class="pageTitle">
+            <div>Title</div>
+            <div class="underLine"></div>
+        </div>
+        <div>點擊可以得到各縣市詳細資料</div>
+        <div id="updateTime">Update time: </div>
+
+        <div class="chartContainer">
+            <div id="total-data-chart" class="chart"></div>
+        </div>
+
+        <div id="chartCityId">City</div>
+
+        <div class="chartContainer">
+            <div id="cityChart1" class="chart"></div>
+        </div>
+    </section>
+
     <section class="section">
         <div class="pageTitle">
             <div>Title</div>
             <div class="underLine"></div>
         </div>
+
         <div class="chartContainer">
-            <div id="total-data-chart" class="chart"></div>
-            <div id="chartCityId">City</div>
-            <div id="cityChart1" class="chart"></div>
+            <div id="vaccine-type-data-chart" class="chart"></div>
         </div>
     </section>
 
@@ -141,7 +159,15 @@
 
         /* Heheehe I will make your brain explode:) */
         var vaccineDic = {};
-        var totalData = [['Gerne', '第一劑', '第二劑', '第三劑', { role: 'annotation' } ]];
+        // var totalData = [['Gerne', '第一劑', '第二劑', '第三劑', { role: 'annotation' } ]];
+        var totalData = {
+            cols: [
+                {label: 'x', type: 'string'},
+                {label: '第二劑', type: 'number'},
+                {label: '第一劑', type: 'number'},
+            ],
+            rows: []
+        };
         var allCityData = {};
         database.ref("Vaccine/").once('value', snapshot => {
             snapshot.forEach(childSnapshot => {
@@ -149,20 +175,50 @@
                 let key = childSnapshot.key
                 vaccineDic[key] = value
 
-                totalData.push(OrganizeAllData(key, value))
-                allCityData[key] = OrgainizeCityData(key, value)
+                // totalData.push(OrganizeAllData(key, value))
+                if(key != 'time'){
+                    totalData['rows'].push(OrganizeAllData(key, value))
+                    allCityData[key] = OrgainizeCityData(key, value)
+                }else if(key === 'time'){
+                    console.log(value)
+                    ShowChartText('updateTime', 'Update time: ' + value);
+                }
             });
             console.log(totalData);
             console.log(allCityData);
             
             google.charts.setOnLoadCallback(DrawStuff(totalData, allCityData, 'total-data-chart', 0));
             google.charts.setOnLoadCallback(DrawStuff(totalData, allCityData['全國'], 'cityChart1', 1));
-            ShowChartText('全國');
+            ShowChartText('chartCityId', '全國');
         });
         
+        var vacTypeData = [['人數', '第一劑', '第二劑', '總人數']];
+        database.ref("Vaccine_type/").once('value', snapshot => {
+            snapshot.forEach(childSnapshot => {
+                let value = childSnapshot.val()
+                let key = childSnapshot.key
+                
+                if(key != 'time'){
+                    vacTypeData.push(OrganizeVaccineTypeData(key, value))
+                }
+            });
+            console.log(vacTypeData);
+            google.charts.setOnLoadCallback(DrawStuff(totalData, vacTypeData, 'vaccine-type-data-chart', 1));
+        });
+        
+        function OrganizeVaccineTypeData(key, value){
+            let vacTypeData = [key, value[0], value[1], value[2]];
+            // vacTypeData.push(.concat().concat());
+
+            return vacTypeData;
+        }
+
         function OrganizeAllData(key, value){
-            let allData = [key];
-            allData = allData.concat(value["總計"].concat(['']));
+            // let allData = [key];
+            // allData = allData.concat(value["總計"].concat(['']));
+            let first = value["總計"][0];
+            let sec = value["總計"][1];
+            let allData = {c: [{v: key}, {v: sec}, {v: -first, f: first}]}
             
             return allData;
         }
@@ -201,19 +257,38 @@
 
         function DrawStuff(totalData, allCityData, id, type){
             if(type === 0){
-                var data1 = google.visualization.arrayToDataTable(totalData);
+                // var data1 = google.visualization.arrayToDataTable(totalData);
+                var data1 = new google.visualization.DataTable(totalData);
     
                 var options1 = {
-                    // width: 1200,
-                    // height: 800,
                     title: '疫苗接種率',
                     subtitle: '個別縣市',
-                    legend: { position: 'top', maxLines: 4 },
-                    bar: { groupWidth: '80%' },
                     isStacked: true,
-
+                    
+                    legend: { 
+                        position: 'top', 
+                        maxLines: 4, 
+                        textStyle: {color: 'white'} 
+                    },
+                    vAxis: { 
+                        title: '城市',
+                        titleTextStyle: { color: '#FFF' },
+                        textStyle: { color: '#FFF' } 
+                    },
+                    hAxis: { 
+                        textStyle: { color: '#FFF' },
+                        ticks: [
+                            {v: -100, f: '100%'},
+                            {v: -50, f: '50%'},
+                            {v: 0, f: '0%'},
+                            {v: 50, f: '50%'},
+                            {v: 100, f: '100%'},
+                        ]
+                    },
+                    bar: { groupWidth: '80%' },
+                    annotations: { textStyle: { color: '#FFF' } },
                     backgroundColor: { fill:'transparent' },
-                    titleTextStyle: {color: 'white'},
+                    titleTextStyle: { color: 'white' },
                 };
                 
                 var chart1 = new google.visualization.BarChart(document.getElementById(id))
@@ -225,36 +300,57 @@
                         var selectedValue = data1.getValue(selectedItem.row, 0);
                         console.log(allCityData[selectedValue]);
                         google.charts.setOnLoadCallback(DrawStuff(totalData, allCityData[selectedValue], 'cityChart1', 1));
-                        ShowChartText(selectedValue);
+                        ShowChartText("chartCityId", selectedValue);
                     }
                 }
                 
                 google.visualization.events.addListener(chart1, 'click', selectHandler);
                 
             }else if(type === 1){
+                var chartHeight = CheckWidth();
+
                 var data2 = google.visualization.arrayToDataTable(allCityData);
                 var options2 = {
                     title: '疫苗接種率',
-                    subtitle: '時間',
                     
                     backgroundColor: { fill:'transparent' },
                     titleTextStyle: {color: 'white'},
-                    // textStyle:{color: '0x000'}
                     chartArea: {
                         backgroundColor: 'transparent',
                     },
+                    legend: { 
+                        position: 'left', 
+                        maxLines: 4, 
+                        textStyle: {color: 'white'} 
+                    },
+                    vAxis: { textStyle: { color: '#FFF' } },
+                    hAxis: { textStyle: { color: '#FFF' } },
+                    height: chartHeight,
                 };
         
                 var chart2 = new google.charts.Bar(document.getElementById(id));
                 chart2.draw(data2, google.charts.Bar.convertOptions(options2));
             }
         }
-    </script>
-    <script>
-        function ShowChartText(cityName){
-            let text = document.getElementById("chartCityId");
 
-            text.textContent = cityName;
+        function CheckWidth(){
+            var width = window.screen.width;
+                if(width >= 600){
+                    var chartHeight = 800;
+                }else{
+                    var chartHeight = 300;
+                }
+
+            return chartHeight;
+        }
+    </script>
+
+    <!-- Text -->
+    <script>
+        function ShowChartText(id, textContent){
+            let text = document.getElementById(id);
+
+            text.textContent = textContent;
             text.style.display = 'block';
         }
     </script>

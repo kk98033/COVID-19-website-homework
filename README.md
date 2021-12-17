@@ -11,3 +11,12 @@
 [Parallax](https://github.com/pixelcog/parallax.js)
 
 [臺灣地圖](https://github.com/letswritetw/letswrite-taiwan-map-basic)
+
+## 網頁資料來源
+[臺灣疫苗資料](https://covid-19.nchc.org.tw/dt_002-csse_covid_19_daily_reports_vaccine_city2.php)
+
+[新聞](https://www.cdc.gov.tw/Bulletin/List/MmgtpeidAR5Ooai4-fgHzQ)
+
+[臺灣確診數資料](https://nidss.cdc.gov.tw/nndss/DiseaseMap?id=19CoV)
+
+[世界確診資料](https://www.worldometers.info/coronavirus/)

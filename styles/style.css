@@ -185,9 +185,14 @@ h1{
 
 
 /* #region Chart */
+.chartContainer{
+    overflow-x: scroll;
+}
+
 .chart{
     width: 100%; 
     height: 800px;
+    /* background-color: rgb(255, 255, 255); */
 }
 
 #chartCityId{
@@ -242,13 +247,14 @@ h1{
     }
     /* #endregion */
     
-    .chartContainer{
-        overflow-x: scroll;
-    }
 
     .chart{
-        width: 500px; 
-        height: 400px;
+        width: 800px; 
+        height: 600px;
+    }
+
+    #total-data-chart{
+        height: 800px;
     }
 
     #chartCityId{
