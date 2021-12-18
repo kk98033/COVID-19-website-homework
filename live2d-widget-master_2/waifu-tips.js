@@ -140,6 +140,7 @@ function loadWidget(config) {
 
 	(function welcomeMessage() {
 		console.log(location.pathname);
+		console.log(location.pathname.includes('taiwan-data'), 'afasf');
 		let text;
 		if (location.pathname.includes("index")) { // 如果是主页
 			const now = new Date().getHours();
@@ -151,14 +152,6 @@ function loadWidget(config) {
 			else if (now > 19 && now <= 21) text = "晚上好，今天過得怎麼樣？";
 			else if (now > 21 && now <= 23) text = ["已經這麼晚了呀，早點休息吧，晚安～", "深夜時要愛護眼睛呀！"];
 			else text = "你是夜貓子呀？這麼晚還不睡覺，明天起的來嗎？";
-		} else if (document.referrer !== "") {
-			const referrer = new URL(document.referrer),
-				domain = referrer.hostname.split(".")[1];
-			if (location.hostname === referrer.hostname) text = `歡迎閱讀<span>「${document.title.split(" - ")[0]}」</span>`;
-			else if (domain === "baidu") text = `Hello！來自 百度搜索 的朋友<br>你是搜索 <span>${referrer.search.split("&wd=")[1].split("&")[0]}</span> 找到我的嗎？`;
-			else if (domain === "so") text = `Hello！來自 360搜索 的朋友<br>你是搜索 <span>${referrer.search.split("&q=")[1].split("&")[0]}</span> 找到我的嗎？`;
-			else if (domain === "google") text = `Hello！来自 Google搜索 的朋友<br>歡迎閱讀<span>「${document.title.split(" - ")[0]}」</span>`;
-			else text = `Hello！來自 <span>${referrer.hostname}</span> 的朋友`;
 		} else if (location.pathname.includes("about-us")) {
 			text = `這裡是網頁製作者們的名單和分工喔～`
 		} else if (location.pathname.includes("taiwan-data")) {
@@ -173,6 +166,14 @@ function loadWidget(config) {
 			text = [`快來看點影片補充點COVID-19的知識啦～`, `這些都是我精心挑選過的人類高質量影片呢(•‾⌣‾•)`]
 		} else if (location.pathname.includes("reference")) {
 			text = [`想要看我的source code嗎？(灬ºωº灬)`, `這裡面的程式碼不是我的程式碼，是“我們”的程式碼(´∀｀ゞ`]
+		} else if (document.referrer !== "") {
+			const referrer = new URL(document.referrer),
+				domain = referrer.hostname.split(".")[1];
+			if (location.hostname === referrer.hostname) text = `歡迎閱讀<span>「${document.title.split(" - ")[0]}」</span>`;
+			else if (domain === "baidu") text = `Hello！來自 百度搜索 的朋友<br>你是搜索 <span>${referrer.search.split("&wd=")[1].split("&")[0]}</span> 找到我的嗎？`;
+			else if (domain === "so") text = `Hello！來自 360搜索 的朋友<br>你是搜索 <span>${referrer.search.split("&q=")[1].split("&")[0]}</span> 找到我的嗎？`;
+			else if (domain === "google") text = `Hello！来自 Google搜索 的朋友<br>歡迎閱讀<span>「${document.title.split(" - ")[0]}」</span>`;
+			else text = `Hello！來自 <span>${referrer.hostname}</span> 的朋友`;
 		} else {
 			text = `歡迎閱讀<span>「${document.title.split(" - ")[0]}」</span>`;
 		}
