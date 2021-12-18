@@ -2,13 +2,13 @@
     position: relative;
     color: rgb(0, 0, 0);
     font-size: 30px;
+    height: 300px;
 }
 
 .newSlides{
     display: none;
     padding: 80px;
     text-align: center;
-
 }
 
 .newSlides a{
