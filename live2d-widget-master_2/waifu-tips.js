@@ -139,8 +139,9 @@ function loadWidget(config) {
 	})();
 
 	(function welcomeMessage() {
+		console.log(location.pathname);
 		let text;
-		if (location.pathname === "/") { // 如果是主页
+		if (location.pathname.includes("index")) { // 如果是主页
 			const now = new Date().getHours();
 			if (now > 5 && now <= 7) text = "早上好！一日之計在於晨，美好的一天就要開始了。";
 			else if (now > 7 && now <= 11) text = "上午好！工作順利嘛，不要久坐，多起來多運動哦！";
@@ -158,6 +159,20 @@ function loadWidget(config) {
 			else if (domain === "so") text = `Hello！來自 360搜索 的朋友<br>你是搜索 <span>${referrer.search.split("&q=")[1].split("&")[0]}</span> 找到我的嗎？`;
 			else if (domain === "google") text = `Hello！来自 Google搜索 的朋友<br>歡迎閱讀<span>「${document.title.split(" - ")[0]}」</span>`;
 			else text = `Hello！來自 <span>${referrer.hostname}</span> 的朋友`;
+		} else if (location.pathname.includes("about-us")) {
+			text = `這裡是網頁製作者們的名單和分工喔～`
+		} else if (location.pathname.includes("taiwan-data")) {
+			text = `希望確診數不要再增加了(◞‸◟)`
+		} else if (location.pathname.includes("world-data")) {
+			text = `今天怎麼又增加這麼多確診數(☍﹏⁰。)`
+		} else if (location.pathname.includes("vaccine")) {
+			text = [`快來看看已經有多少人打了疫苗啦~`, `偷偷告訴你，我還沒有打疫苗(°ཀ°)`]
+		} else if (location.pathname.includes("game")) {
+			text = `一個破破的unity小遊戲made by meヽ(✿ﾟ▽ﾟ)ノ`
+		} else if (location.pathname.includes("video")) {
+			text = [`快來看點影片補充點COVID-19的知識啦～`, `這些都是我精心挑選過的人類高質量影片呢(•‾⌣‾•)`]
+		} else if (location.pathname.includes("reference")) {
+			text = [`想要看我的source code嗎？(灬ºωº灬)`, `這裡面的程式碼不是我的程式碼，是“我們”的程式碼(´∀｀ゞ`]
 		} else {
 			text = `歡迎閱讀<span>「${document.title.split(" - ")[0]}」</span>`;
 		}

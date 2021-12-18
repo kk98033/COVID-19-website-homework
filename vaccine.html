@@ -38,7 +38,7 @@
         <a id="btn" style="margin-left: 25px;margin-top: 20px; margin-right: 40px; cursor: pointer;" onclick="CheckState()"><div class="bar" id="bar" style="position: fixed; margin-left: 10px;"></div></a>
         <div class="menu-item-home"><a href="index.html">Home</a></div>
         <div class="menu-item-friends"><a href="about-us.html">About Us</a></div>
-        <div class="menu-item-about"><a href="donate.html">Donate</a></div>
+        <!-- <div class="menu-item-about"><a href="donate.html">Donate</a></div> -->
         <div class="dropdown" onmouseover="ShowDropdown()" onmouseout="CloseDropdown()">
             <button class="dropbtn menu-switch-language" onclick="ShowDropdown()">English
               <i class="fa fa-caret-down"></i>
@@ -65,6 +65,7 @@
     </header>
 
     <section class="section" id="section1">
+        <div class="shadow"></div>
         <div class="pageTitle">
             <div>Title</div>
             <div class="underLine"></div>
@@ -88,6 +89,7 @@
             <div>Title</div>
             <div class="underLine"></div>
         </div>
+        <div id="updateTime2">Update time: </div>
 
         <div class="chartContainer">
             <div id="vaccine-type-data-chart" class="chart"></div>
@@ -200,6 +202,8 @@
                 
                 if(key != 'time'){
                     vacTypeData.push(OrganizeVaccineTypeData(key, value))
+                }else{
+                    ShowChartText('updateTime2', 'Update time: ' + value)
                 }
             });
             console.log(vacTypeData);

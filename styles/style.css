@@ -87,7 +87,7 @@ h1{
 
 .circleImg{
     border-radius: 50%;
-    padding: 50px;
+    padding: 50px;  
 }
 
 .backgroundText{
@@ -186,7 +186,8 @@ h1{
 
 /* #region Chart */
 .chartContainer{
-    overflow-x: scroll;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .chart{
@@ -247,6 +248,11 @@ h1{
     }
     /* #endregion */
     
+
+    .chartContainer{
+        overflow-x: scroll;
+        overflow-y: scroll;
+    }
 
     .chart{
         width: 800px; 
