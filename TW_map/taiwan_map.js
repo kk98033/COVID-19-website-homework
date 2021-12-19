@@ -76,7 +76,7 @@ const TaiwanMap = new Vue({
             })
             .on('click', d => {
               var twDic = JSON.parse(localStorage.getItem("twDic")); // get tw data
-              
+              ShowMessage('a');
               this.h1 = d.properties.COUNTYNAME + twDic[d.properties.COUNTYNAME]; // 換中文名
               this.h2 = d.properties.COUNTYENG; // 換英文名
               // 有 .active 存在，就移除 .active
