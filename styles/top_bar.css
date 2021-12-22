@@ -3,6 +3,7 @@
     top: -50px;
     right: 0px;
     width: 100%;
+    margin-top: -5px;
     display: block;
 
     transition: top 0.3s;
@@ -18,6 +19,7 @@
     margin-left: 50px;
     text-decoration: none;
     display: block;
+    /* font-size: 16px; */
 }
 
 .topBar a:hover{
@@ -109,29 +111,36 @@
     color: gray;
 }
 
+@media screen and (max-width: 600px) {
+    .menu-item-home, .menu-item-friends{
+        display: none;
+    }
+}
+
 @media screen and (max-width: 600px){
     .topBar a{
         padding-left: 0;
         padding-right: 0;
-        font-size: 15px;
+        font-size: 20px;
     }
 
     .dropdown{
+        margin-top: -5px;
         margin-left: 0px;
     }
 
     .dropdown .dropbtn{
-        font-size: 15px;
+        font-size: 20px;
     }    
 }
 
 @media screen and (max-width: 480px){
     .topBar a{
         margin-left: 10px;
-        font-size: 10px;
+        font-size: 20px;
     }
 
     .dropdown .dropbtn{
-        font-size: 10px;
+        font-size: 20px;
     }
 }
