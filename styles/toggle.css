@@ -58,7 +58,7 @@ input:checked + .switchSlider:before{
 .switchSlider.round:before{
     border-radius: 50%;
 }
-
+/* 
 @media screen and (max-width: 600px){
     .switch{
         width: 30px;
@@ -75,10 +75,10 @@ input:checked + .switchSlider:before{
     input:checked + .switchSlider:before{
         transform: translateX(13px);
     }
-}
+} */
 
-@media screen and (max-width: 350px){
+/* @media screen and (max-width: 350px){
     .switch{
         left: 50%;
     }
-}
+} */
