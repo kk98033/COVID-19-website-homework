@@ -23,7 +23,14 @@
 <body id="body" onmousedown="CloseSideClickingOuside(event)">
     <div id="overlay"></div>
     <div id="sidePageId" class="sidePage menu-item">
-        <a id="btn" class="responsive" href="index.html">&#8250; Home</a>
+        <div class="dropdown responsive" onmouseover="ShowDropdown(1)" onmouseout="CloseDropdown(1)">
+            <button class="dropbtn menu-switch-language" onclick="ShowDropdown()">English
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content" id="dropdown">
+                <a style="margin: 0; text-align: center;" href="#">Chinese</a>
+            </div>
+        </div>
         <a id="btn" class="responsive" href="about-us.html">&#8250; About Us</a>
         <a id="btn" href="javascript:void(0)" class="closeBtn" onclick="CloseSidePage()">&times;</a>
         <a id="btn" href="https://www.cdc.gov.tw/" target="blank">&#8250; 疾管署網站</a>
@@ -43,11 +50,11 @@
         <div class="menu-item-home"><a href="index.html">Home</a></div>
         <div class="menu-item-friends"><a href="about-us.html">About Us</a></div>
         <!-- <div class="menu-item-about"><a href="donate.html">Donate</a></div> -->
-        <div class="dropdown" onmouseover="ShowDropdown()" onmouseout="CloseDropdown()">
+        <div class="dropdown" onmouseover="ShowDropdown(2)" onmouseout="CloseDropdown(2)">
             <button class="dropbtn menu-switch-language" onclick="ShowDropdown()">English
               <i class="fa fa-caret-down"></i>
             </button>
-            <div class="dropdown-content" id="dropdown">
+            <div class="dropdown-content" id="dropdown2">
                 <a style="margin: 0; text-align: center;" href="#">Chinese</a>
             </div>
         </div>

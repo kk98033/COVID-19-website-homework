@@ -1,4 +1,3 @@
-const dropdown = document.getElementById("dropdown");
 const topBar = document.getElementById("topBar")
 const backToTop = document.getElementById("backToTop");
 
@@ -48,15 +47,26 @@ function HideTop(){
 // Close the dropdown if the user clicks outside of it
 window.onclick = function(e) {
     if (!e.target.matches('.dropbtn')) {
-        CloseDropdown()
+        CloseDropdown(1)
+        CloseDropdown(2)
     }
 }
 
-function ShowDropdown(){
-    document.getElementById("dropdown").classList.toggle("show");
+function ShowDropdown(dropdownID){
+    if(dropdownID === 1){
+        document.getElementById("dropdown").classList.toggle("show");
+    }else if(dropdownID == 2){
+        document.getElementById("dropdown2").classList.toggle("show");
+    }
     
 }
-function CloseDropdown(){
+function CloseDropdown(dropdownID){
+    if(dropdownID === 1){
+        var dropdown = document.getElementById("dropdown");
+    }else if(dropdownID == 2){
+        var dropdown = document.getElementById("dropdown2");
+    }
+
     if (dropdown.classList.contains('show')) {
         dropdown.classList.remove('show');
     }
