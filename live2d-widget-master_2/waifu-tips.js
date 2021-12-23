@@ -139,8 +139,6 @@ function loadWidget(config) {
 	})();
 
 	(function welcomeMessage() {
-		console.log(location.pathname);
-		console.log(location.pathname.includes('taiwan-data'), 'afasf');
 		let text;
 		if (location.pathname.includes("index")) { // 如果是主页
 			const now = new Date().getHours();
