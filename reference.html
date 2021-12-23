@@ -23,34 +23,45 @@
 <body id="body" onmousedown="CloseSideClickingOuside(event)">
     <div id="overlay"></div>
     <div id="sidePageId" class="sidePage menu-item">
-        <a href="javascript:void(0)" class="closeBtn" onclick="CloseSidePage()">&times;</a>
-        <a href="https://www.cdc.gov.tw/" target="blank">&#8250; 疾管署網站</a>
-        <a href="https://www.who.int/" target="blank">&#8250; 世界衛生組織網站</a>
-        <a href="taiwan-data.html">&#8250; 臺灣確診數據</a>
-        <a href="world-data.html">&#8250; 世界確診數據</a>
-        <a href="vaccine.html">&#8250; 疫苗介紹＆預約</a>
-        <a href="game.html">&#8250; 小遊戲</a>
-        <a href="video.html">&#8250; COVID-19相關影片</a>
-        <a href="reference.html">&#8250; 參考資料</a>
-    </div>
-    
-    <div id="topBar" class="topBar" style="z-index: 9999;">
-        <a id="btn" style="margin-left: 25px;margin-top: 20px; margin-right: 40px; cursor: pointer;" onclick="CheckState()"><div class="bar" id="bar" style="position: fixed; margin-left: 10px;"></div></a>
-        <div class="menu-item-home"><a href="index.html">Home</a></div>
-        <div class="menu-item-friends"><a href="about-us.html">About Us</a></div>
-        <!-- <div class="menu-item-about"><a href="donate.html">Donate</a></div> -->
-        <div class="dropdown" onmouseover="ShowDropdown()" onmouseout="CloseDropdown()">
+        <div class="dropdown responsive" onmouseover="ShowDropdown(1)" onmouseout="CloseDropdown(1)">
             <button class="dropbtn menu-switch-language" onclick="ShowDropdown()">English
               <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content" id="dropdown">
                 <a style="margin: 0; text-align: center;" href="#">Chinese</a>
             </div>
-        </div> 
+        </div>
+        <a id="btn" class="responsive" href="about-us.html">&#8250; About Us</a>
+        <a id="btn" href="javascript:void(0)" class="closeBtn" onclick="CloseSidePage()">&times;</a>
+        <a id="btn" href="https://www.cdc.gov.tw/" target="blank">&#8250; 疾管署網站</a>
+        <a id="btn" href="https://www.who.int/" target="blank">&#8250; 世界衛生組織網站</a>
+        <a id="btn" href="taiwan-data.html">&#8250; 臺灣確診數據</a>
+        <a id="btn" href="world-data.html">&#8250; 世界確診數據</a>
+        <a id="btn" href="vaccine.html">&#8250; 疫苗介紹＆預約</a>
+        <a id="btn" href="game.html">&#8250; 小遊戲</a>
+        <a id="btn" href="video.html">&#8250; COVID-19相關影片</a>
+        <a id="btn" href="reference.html">&#8250; 參考資料</a>
+    </div>
+    
+    <div id="topBar" class="topBar" style="z-index: 9999;">
+        <div class="menu-item-categories">
+            <a id="btn" style="margin-left: 25px;margin-top: 20px; margin-right: 40px; cursor: pointer;" onclick="CheckState()"><div class="bar" id="bar" style="position: fixed; margin-left: 10px;"></div></a>
+        </div>
+        <div class="menu-item-home"><a href="index.html">Home</a></div>
+        <div class="menu-item-friends"><a href="about-us.html">About Us</a></div>
+        <!-- <div class="menu-item-about"><a href="donate.html">Donate</a></div> -->
+        <div class="dropdown" onmouseover="ShowDropdown(2)" onmouseout="CloseDropdown(2)">
+            <button class="dropbtn menu-switch-language" onclick="ShowDropdown()">English
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content" id="dropdown2">
+                <a style="margin: 0; text-align: center;" href="#">Chinese</a>
+            </div>
+        </div>
         <label class="switch menu-toggle-darkmode">
             <input type="checkbox">
-            <span class="switchSlider round"></span>
-        </label>
+            <span class="switchSlider round menu-toggle-darkmode"></span>
+        </label> 
     </div>
 
     <a class="backToTop" id="backToTop" href="#head">Top</a>

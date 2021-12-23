@@ -67,7 +67,7 @@
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
-    color: red;
+    color: gray;
 }
 
 .dropdown-content {
@@ -112,8 +112,26 @@
 }
 
 @media screen and (max-width: 600px) {
-    .menu-item-home, .menu-item-friends{
+    /* Responsive */
+    .menu-item-friends, .dropdown{
         display: none;
+    }
+
+    .dropdown{
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 5px;
+    }
+
+    .dropdown-content{
+        position: relative;
+        width: 120px;
+    }
+
+    .dropdown-content a{
+        font-size: 20px !important;
+        padding: 10px !important;
     }
 }
 

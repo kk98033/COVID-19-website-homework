@@ -60,4 +60,8 @@
     .responsive{
         display: block !important;
     }
+
+    .sidePage{
+        overflow-y: scroll; 
+    }
 }
