@@ -1,8 +1,8 @@
 const TaiwanMap = new Vue({
     el: '#app',
     data: {
-      h1: '縣市中文',
-      h2: '縣市英文'
+      h1: '縣市確診數：',
+      h2: '縣市確診數(英文)：'
     },
     methods: {
       async getTaiwanMap() {
@@ -76,9 +76,9 @@ const TaiwanMap = new Vue({
             })
             .on('click', d => {
               var twDic = JSON.parse(localStorage.getItem("twDic")); // get tw data
-              ShowMessage('a');
-              this.h1 = d.properties.COUNTYNAME + twDic[d.properties.COUNTYNAME]; // 換中文名
-              this.h2 = d.properties.COUNTYENG; // 換英文名
+
+              this.h1 = d.properties.COUNTYNAME + ': ' + twDic[d.properties.COUNTYNAME]; // 換中文名
+              this.h2 = d.properties.COUNTYENG + ': ' + twDic[d.properties.COUNTYNAME]; // 換英文名
               // 有 .active 存在，就移除 .active
               if(document.querySelector('.active')) {
                 document.querySelector('.active').classList.remove('active');
