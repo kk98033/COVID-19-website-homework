@@ -180,6 +180,12 @@
 		"selector": "#reference-id",
 		"text": ["這裡是此網站的參考資料～", "快來看看”我們“的程式碼吧∠( ᐛ 」∠)_"]
 	}, {
+		"selector": "#next",
+		"text": ["點擊這裡可以到下一個新聞喔～"]
+	}, {
+		"selector": "#prev",
+		"text": ["點擊這裡可以到上一個新聞喔～"]
+	}, {
 		"selector": ".bottomText",
 		"text": ["偷偷告訴你，這句只是用來裝酷的。"]
 	}, {

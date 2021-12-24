@@ -202,6 +202,7 @@ h1{
 }
 /* #endregion */
 
+
 @media(max-width: 600px){
     .fullHeight{
         padding-right: 5px;
@@ -266,6 +267,12 @@ h1{
     #chartCityId{
         font-size: 30px;
     }
+
+    /* #region Tw table */
+    #twTable{
+        overflow-x: scroll;
+    }
+    /* #endregion */
 }
 
 @media(max-width: 400px){
