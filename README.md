@@ -20,3 +20,6 @@
 [臺灣確診數資料](https://nidss.cdc.gov.tw/nndss/DiseaseMap?id=19CoV)
 
 [世界確診資料](https://www.worldometers.info/coronavirus/)
+
+## API
+[世界各國確診數資料API](https://documenter.getpostman.com/view/10808728/SzS8rjbc)

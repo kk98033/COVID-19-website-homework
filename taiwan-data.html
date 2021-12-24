@@ -78,20 +78,23 @@
         <div class="TWbackgroundImg"></div>
     </header>
 
-    <section class="section">
-        <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam dolorum unde incidunt pariatur? Magni repellat ex ad! Veritatis id officiis nulla ut? Tempora dolor nemo, sit amet molestias repudiandae! Commodi.</div>
-        <div id="twTable"></div>
+    <section class="section" id="section1">
+        <h3 class="pageTitle">
+            <div>TITLE</div>
+            <div class="underLine"></div>
+        </h3>
+        <div id="twTable" onmouseover="ShowTwMessage()"></div>
     </section>
 
-    <div class="fullHeight" id="section1">
+    <div class="fullHeight" id="section2">
         <h3 class="pageTitle">
             <div>TITLE</div>
             <div class="underLine"></div>
         </h3>
         <div class="shadow"></div>
         <div id="newsContainer" class="newsContainer">
-            <a class="prev" onclick="PlusSlides(-1)">❮</a>
-            <a class="next" onclick="PlusSlides(1)">❯</a>
+            <a id="prev" class="prev" onclick="PlusSlides(-1)">❮</a>
+            <a id="next" class="next" onclick="PlusSlides(1)">❯</a>
         </div>
         <div id="dotContainer" class="dotContainer">
         </div>
@@ -171,6 +174,7 @@
 
     <!-- Live 2D -->
     <script src="live2d-widget-master_2/autoload.js"></script>
+    <script src="live2d-widget-master_2/waifu-tips.js"></script>
 
     <script src="JS/side_page.js"></script>
     <script src="JS/top_bar.js"></script>
