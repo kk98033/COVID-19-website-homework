@@ -1,0 +1,120 @@
+.recentNews {
+    background-color: rgb(0, 0, 0)  
+}
+.recentNews .information-title {
+    text-align:center;
+    padding-top:30px;
+    padding-bottom:30px;
+    font-family: 'nimbus-sans-condensed', sans-serif;
+    font-size:55px;
+    font-weight:bold;
+    color: #fff;
+}
+
+.information-title{
+    margin: 0;
+}
+
+.recentNews .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* margin-bottom: 30px; */
+    flex-direction: row;
+}
+.recentNews .ct-blog {
+    margin-bottom: 30px;
+    padding: 30px;
+    width: 40%;
+}
+.ct-blog .inner {
+    /* width: 30%; */
+    background-color: #FFF;
+    padding: 10px;
+    transition: all 0.2s ease-in-out 0s;
+    cursor: pointer;
+    height: auto;
+}
+.ct-blog .inner:hover {
+    background-color: #e6e6e6;
+}
+.ct-blog .fauxcrop {
+    height: 180px;
+    overflow: hidden;
+}
+.ct-blog .fauxcrop img {
+    width: 100%;
+}
+.ct-blog-content {
+    display: table;
+    padding: 30px 0 28px;
+}
+.ct-blog-content .ct-blog-date {
+    border-right: 1px solid #95A5A6;
+    display: table-cell;
+    font-family: "Lato", sans-serif;
+    padding: 0px 18px 0px 15px;
+    text-align: center;
+}
+.ct-blog-content .ct-blog-date span {
+    font-size: 16px;
+    color: rgb(20, 117, 175);  
+    font-weight: 700;
+    display: block;
+    line-height: 1;
+}
+.ct-blog-content .ct-blog-date strong {
+    font-size: 25px;
+    color: rgb(20, 117, 175);  
+}
+.ct-blog-content .ct-blog-header {
+    color: #000;
+    display: table-cell;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.2px;
+    line-height: 1.1;
+    padding: 0 20px;
+    vertical-align: top;
+}
+.btn-news {
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 30px;
+    text-align: center;
+}
+.btn-news.btn-contests a {
+    color: #fff;
+    font-family: 'nimbus-sans-condensed', sans-serif;
+    font-size: 24px;
+    transition: all 0.2s ease-in-out 0s;
+}
+.btn-news.btn-contests a:hover {
+    color: #000;
+}
+
+@media(min-width: 100px){
+    .ct-blog .inner{
+        height: 500px;
+    }
+
+    .ct-blog .fauxcrop{
+        height: 300px;
+    }
+}
+
+@media(max-width: 600px){
+    .recentNews .ct-blog{
+        width: 100%;
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+}
+
+@media(max-width: 400px){
+    .recentNews .ct-blog{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
