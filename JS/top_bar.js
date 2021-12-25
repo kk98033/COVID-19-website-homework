@@ -47,8 +47,8 @@ function HideTop(){
 // Close the dropdown if the user clicks outside of it
 window.onclick = function(e) {
     if (!e.target.matches('.dropbtn')) {
-        CloseDropdown(1)
-        CloseDropdown(2)
+        CloseDropdown(1);
+        CloseDropdown(2);
     }
 }
 
@@ -66,7 +66,7 @@ function CloseDropdown(dropdownID){
     }else if(dropdownID == 2){
         var dropdown = document.getElementById("dropdown2");
     }
-
+    
     if (dropdown.classList.contains('show')) {
         dropdown.classList.remove('show');
     }

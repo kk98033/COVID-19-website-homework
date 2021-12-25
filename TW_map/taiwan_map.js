@@ -77,15 +77,18 @@ const TaiwanMap = new Vue({
             .on('click', d => {
               var twDic = JSON.parse(localStorage.getItem("twDic")); // get tw data
 
-              this.h1 = d.properties.COUNTYNAME + ': ' + twDic[d.properties.COUNTYNAME]; // 換中文名
+              this.h1 = d.properties.COUNTYNAME + ': ' + twDic[d.properties.COUNTYNAME] + '人'; // 換中文名
               this.h2 = d.properties.COUNTYENG + ': ' + twDic[d.properties.COUNTYNAME]; // 換英文名
+              
+              showMessage(d.properties.COUNTYNAME + ': ' + '<span>' + twDic[d.properties.COUNTYNAME] + '</span>' + ' 人', 8000, 9);
+              
               // 有 .active 存在，就移除 .active
               if(document.querySelector('.active')) {
                 document.querySelector('.active').classList.remove('active');
               }
               // 被點擊的縣市加上 .active
               document.getElementById('city' + d.properties.COUNTYCODE).classList.add('active');
-            });
+            })
         });
         return svg;
       },

@@ -1,0 +1,39 @@
+{
+    "en": {
+        "language": "Language\u1401",
+        "home": "Home",
+        "about_us": "About Us",
+
+        "about_text2": "\u203A Abous Us",
+        "cdc": "\u203A Centers for Disease Control",
+        "who": "\u203A World Health Organization",
+        "tw_page": "\u203A Taiwan COVID-19 Information",
+        "world_page": "\u203A World COVID-19 Infromation",
+        "vaccine_page": "\u203A Vaccine Information & Reservation",
+        "game_page": "\u203A Games",
+        "covid_page": "\u203A Videos about COVID-19",
+        "ref_page": "\u203A Reference",
+
+        "contact_me": "Contact Me",
+        "credit_text": "All pictures used on this website are for the homework and exercises purpose, they do not belong to me"
+    },
+    
+    "cn": {
+        "language": "語言\u1401",
+        "home": "回首頁",
+        "about_us": "關於我們",
+
+        "about_text2": "\u203A 關於我們",
+        "cdc": "\u203A 疾管署網站",
+        "who": "\u203A 世界衛生組織網站",
+        "tw_page": "\u203A COVID-19臺灣資訊",
+        "world_page": "\u203A COVID-19世界資訊",
+        "vaccine_page": "\u203A 疫苗資訊 & 預約",
+        "game_page": "\u203A 小遊戲",
+        "covid_page": "\u203A COVID-19 相關介紹影片",
+        "ref_page": "\u203A 參考資料",
+
+        "contact_me": "聯繫我",
+        "credit_text": "所有圖片皆作為作業練習用途，均不屬於我"
+    }
+}
