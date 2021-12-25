@@ -32,15 +32,24 @@ function CloseSidePage(){
 function CloseSideClickingOuside(e){
     var targetId = GetSectionElementId(e);
     // console.log(targetId)
-    if (targetId != "sidePageId" && targetId != "btn" && targetId != ""){
+    // if (targetId != "sidePageId" && targetId != "btn" && targetId != ""){
+    //     CloseSidePage();
+    // }
+    if (!CheckId(targetId)){
         CloseSidePage();
     }
+}
+
+function CheckId(id){
+    ids = ["btn", "about_text2", "cdc", "who", "tw_page", "world_page", "vaccine_page", "game_page", "covid_page", "ref_page", "sidePageId"];
+    console.log(id);
+    return ids.includes(id);
 }
 
 function GetSectionElementId(e){
     var targetId = e.target.id;
     
-    return(targetId)
+    return targetId
 }
 
 // Get mouse
