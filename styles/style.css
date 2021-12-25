@@ -11,6 +11,11 @@ html, body{
     font-family: 'Poppins', sans-serif;
 }
 
+.lightBody{
+    color: rgb(0, 0, 0);
+    background-color: white;
+}
+
 #worldTable{
     overflow: auto;
 }

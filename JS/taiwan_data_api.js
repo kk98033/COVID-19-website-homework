@@ -9,8 +9,10 @@ fetch(url, {})
 .then(data => {
     const taiwanData = data[data.length-1]
     console.log(taiwanData)
-    CreateAllTwTable(taiwanData)
     twMessage = SortText(taiwanData['Confirmed'])
+
+    ShowUpdateTimeText(taiwanData['Date'])
+    CreateAllTwTable(taiwanData)
 })
 
 function SortText(text){
@@ -64,4 +66,9 @@ function CreateAllTwTable(taiwanData){
         }
     }
     body.appendChild(tbl);
+}
+
+function ShowUpdateTimeText(date){
+    const text = document.getElementById('updateTime');
+    text.textContent = `Update time: ` + date;
 }
