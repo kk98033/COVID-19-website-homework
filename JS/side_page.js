@@ -31,10 +31,6 @@ function CloseSidePage(){
 // Hide side page when click ouside the page
 function CloseSideClickingOuside(e){
     var targetId = GetSectionElementId(e);
-    // console.log(targetId)
-    // if (targetId != "sidePageId" && targetId != "btn" && targetId != ""){
-    //     CloseSidePage();
-    // }
     if (!CheckId(targetId)){
         CloseSidePage();
     }
@@ -42,7 +38,7 @@ function CloseSideClickingOuside(e){
 
 function CheckId(id){
     ids = ["btn", "about_text2", "cdc", "who", "tw_page", "world_page", "vaccine_page", "game_page", "covid_page", "ref_page", "sidePageId"];
-    console.log(id);
+    // console.log(id);
     return ids.includes(id);
 }
 

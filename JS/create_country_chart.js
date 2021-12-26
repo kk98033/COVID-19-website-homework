@@ -7,7 +7,7 @@ function CreateCountryTable(){
     .then(res => res.json())
     .then(data => {
         var countryData = data[data.length-1]
-        console.log(countryData)
+        // console.log(countryData)
         // countryMessage = SortText(countryData['Confirmed'])
     
         // ShowUpdateTimeText(countryData['Date'])

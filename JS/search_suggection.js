@@ -70,7 +70,6 @@ function autocomplete(inp, arr) {
           document.getElementById("submit").click(); // simulate click
 
           if (currentFocus > -1) {
-            console.log('sublmigj');
             /*and simulate a click on the "active" item:*/
             if (x) x[currentFocus].click();
           }
@@ -138,17 +137,6 @@ function OrganizeData(data){
 
     return countries
 }
-
-// // Execute a function when the user releases a key on the keyboard
-// input.addEventListener("keyup", function(event) {
-//   // Number 13 is the "Enter" key on the keyboard
-//   if (event.keyCode === 13) {
-//     // Cancel the default action, if needed
-//     event.preventDefault();
-//     // Trigger the button element with a click
-//     document.getElementById("submit").click();
-//   }
-// });
 
 // Get the input field
 var input = document.getElementById("userInput");

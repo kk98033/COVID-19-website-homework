@@ -12,6 +12,8 @@
 
 [臺灣地圖](https://github.com/letswritetw/letswrite-taiwan-map-basic)
 
+[Auto complete](https://www.w3schools.com/howto/howto_js_autocomplete.asp)
+
 ## 網頁資料來源
 [臺灣疫苗資料](https://covid-19.nchc.org.tw/dt_002-csse_covid_19_daily_reports_vaccine_city2.php)
 
