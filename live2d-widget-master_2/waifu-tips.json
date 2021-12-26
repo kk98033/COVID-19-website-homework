@@ -156,10 +156,10 @@
 		"selector": ".post-nav-item a[rel='prev']",
 		"text": ["來看看上一篇文章吧。", "點它可以看上一篇文章哦！", "要翻到上一篇文章嗎？"]
 	}, {
-		"selector": ".extend.next",
+		"selector": ".prePageBtn",
 		"text": ["去下一頁看看吧。", "點他可以前進哦！", "要翻到下一頁嗎？"]
 	}, {
-		"selector": ".extend.prev",
+		"selector": ".nextPageBtn",
 		"text": ["去上一頁看看吧。", "點他可以後退哦！", "要翻到上一頁嗎？"]
 	}, {
 		"selector": "#tw-data",

@@ -75,7 +75,7 @@
     </div>
 
     <div class="back-to-top">
-        <a class="backToTop" id="backToTop" href="#head">Top</a>
+        <a class="backToTop" id="backToTop" href="#section1">Top</a>
     </div>
 
     <header id="head">
@@ -86,9 +86,23 @@
         </div>
         <div class="TWbackgroundImg"></div>
     </header>
-
+    
     <section class="section" id="section1">
         <div class="shadow"></div>
+    
+        <div class="naviContaioner" style="margin-top: 0;">
+            <form class="resopnsiveBtn">
+                <button formaction="#section2" class="nextPageBtn">Prev</button>
+                <button formaction="#section2" class="prePageBtn">Next</button>
+            </form>
+            <form>
+                <button formaction="#section2" class="nextPageBtn normal">Prev</button>
+                <button formaction="#section2" class="naviBtn">1</button>
+                <button formaction="#section3" class="naviBtn">2</button>
+                <button formaction="#section4" class="naviBtn">3</button>
+                <button formaction="#section2" class="prePageBtn normal">Next</button>
+            </form>
+        </div>
         <div class="pageTitle">
             <div>Title</div>
             <div class="underLine"></div>
@@ -100,14 +114,17 @@
             <div id="total-data-chart" class="chart"></div>
         </div>
 
+    </section>
+    
+    <section class="section" id="section2">
         <div id="chartCityId">City</div>
-
+    
         <div class="chartContainer">
             <div id="cityChart1" class="chart"></div>
-        </div>
+        </div>    
     </section>
 
-    <section class="section">
+    <section class="section" id="section3">
         <div class="pageTitle">
             <div>Title</div>
             <div class="underLine"></div>
@@ -119,7 +136,7 @@
         </div>
     </section>
 
-    <section class="recentNews">
+    <section class="recentNews" id="section4">
         <div class="container">
             <h2 class="information-title">
                 Recent News
