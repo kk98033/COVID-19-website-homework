@@ -34,6 +34,4 @@ function SwitchToCN(){
     reload();
 }
 
-function reload(){
-    window.location.reload();
-}
+function reload(){ window.location.reload(); }
