@@ -8,39 +8,39 @@ loadJSON(function(json) {
 function DefineLanguage(language, languages){
     // console.log(window.location.hash);
     if(language === 'en'){
-        language_text.textContent = languages.en.language;
-        home_text.textContent = languages.en.home;
-        about_text.textContent = languages.en.about_us;
+        language_text.innerHTML = languages.en.language + ' <i class="fa fa-caret-down"></i>';
+        home_text.innerHTML = languages.en.home;
+        about_text.innerHTML = languages.en.about_us;
 
-        about_text2.textContent = languages.en.about_text2;
-        cdc.textContent = languages.en.cdc;
-        who.textContent = languages.en.who;
-        tw_page.textContent = languages.en.tw_page;
-        world_page.textContent = languages.en.world_page;
-        vaccine_page.textContent = languages.en.vaccine_page;
-        game_page.textContent = languages.en.game_page;
-        covid_page.textContent = languages.en.covid_page;
-        ref_page.textContent = languages.en.ref_page;
+        about_text2.innerHTML = languages.en.about_text2;
+        cdc.innerHTML = languages.en.cdc;
+        who.innerHTML = languages.en.who;
+        tw_page.innerHTML = languages.en.tw_page;
+        world_page.innerHTML = languages.en.world_page;
+        vaccine_page.innerHTML = languages.en.vaccine_page;
+        game_page.innerHTML = languages.en.game_page;
+        covid_page.innerHTML = languages.en.covid_page;
+        ref_page.innerHTML = languages.en.ref_page;
         
-        contact_me.textContent = languages.en.contact_me;
-        credit_text.textContent = languages.en.credit_text;
+        contact_me.innerHTML = languages.en.contact_me;
+        credit_text.innerHTML = languages.en.credit_text;
         
     }else if(language === 'cn'){
-        language_text.textContent = languages.cn.language;
-        home_text.textContent = languages.cn.home;
-        about_text.textContent = languages.cn.about_us;
+        language_text.innerHTML = languages.cn.language + ' <i class="fa fa-caret-down"></i>';
+        home_text.innerHTML = languages.cn.home;
+        about_text.innerHTML = languages.cn.about_us;
         
-        about_text2.textContent = languages.cn.about_text2;
-        cdc.textContent = languages.cn.cdc;
-        who.textContent = languages.cn.who;
-        tw_page.textContent = languages.cn.tw_page;
-        world_page.textContent = languages.cn.world_page;
-        vaccine_page.textContent = languages.cn.vaccine_page;
-        game_page.textContent = languages.cn.game_page;
-        covid_page.textContent = languages.cn.covid_page;
-        ref_page.textContent = languages.cn.ref_page;
+        about_text2.innerHTML = languages.cn.about_text2;
+        cdc.innerHTML = languages.cn.cdc;
+        who.innerHTML = languages.cn.who;
+        tw_page.innerHTML = languages.cn.tw_page;
+        world_page.innerHTML = languages.cn.world_page;
+        vaccine_page.innerHTML = languages.cn.vaccine_page;
+        game_page.innerHTML = languages.cn.game_page;
+        covid_page.innerHTML = languages.cn.covid_page;
+        ref_page.innerHTML = languages.cn.ref_page;
 
-        contact_me.textContent = languages.cn.contact_me;
-        credit_text.textContent = languages.cn.credit_text;
+        contact_me.innerHTML = languages.cn.contact_me;
+        credit_text.innerHTML = languages.cn.credit_text;
     }
 }

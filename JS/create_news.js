@@ -30,7 +30,7 @@ function ShowNews(n){
         dots[i].className = dots[i].className.replace(" active", "");
     }
 
-    slides[newsIndex-1].style.display = "block";
+    slides[newsIndex-1].style.display = "flex";
     dots[newsIndex-1].className += " active";
 }
 
@@ -60,13 +60,18 @@ function CreateText(text, link, time){
     newText.href = link;
     newText.innerHTML = text;
     newText.setAttribute("target", "None");
+    newText.setAttribute("class", "newsText");
     
     var newTime = document.createElement("div");
     newTime.innerHTML = time;
     newTime.setAttribute("class", "time");
+
+    var newLine = document.createElement("div");
+    newLine.setAttribute("class", 'vl');
     
-    newSldie.appendChild(newText);
     newSldie.appendChild(newTime);
+    newSldie.appendChild(newLine);
+    newSldie.appendChild(newText);
     
     document.getElementById("newsContainer").appendChild(newSldie);
 }

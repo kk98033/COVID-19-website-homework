@@ -354,7 +354,9 @@ h1{
         margin: 10px;
     }
 
-
+    .reference{
+        overflow-x: scroll;
+    }
 }
 
 @media(max-width: 400px){

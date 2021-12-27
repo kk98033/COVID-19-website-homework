@@ -31,7 +31,7 @@ function tableCreate(){
                         td.style.color = 'green';
                     }
                     if(j === 0){
-                        td.appendChild(document.createTextNode(states[i-1])); // state names
+                        td.appendChild(document.createTextNode(CheckStateName(states[i-1]))); // state names
                         td.style.border = '1px solid black';
                     }else{
                         td.appendChild(document.createTextNode(worldDic[states[i-1]][j-1])); // datas
@@ -41,4 +41,14 @@ function tableCreate(){
             }
     }
     body.appendChild(tbl);
+}
+
+function CheckStateName(name){
+    if(name === 'North_America'){
+        name = 'North America';
+    }else if(name === 'South_America'){
+        name = 'South America';
+    }
+
+    return name;
 }
