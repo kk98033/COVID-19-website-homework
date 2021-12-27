@@ -21,6 +21,29 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
 </head>
 <body id="body" onmousedown="CloseSideClickingOuside(event)">
+    <div class="shareBtnContainer" id="share-btn-id">
+        <button class="share-btn">
+            <i class="fas fa-share-alt"></i>
+        </button>
+        <div id="share-container" class="share-options">
+            <p class="shareTitle">share</p>
+            <div class="social-media">
+                <form>
+                    <button style="display: none;" target="blank" class="social-media-btn"><i id="folder" class="far fa-folder-open" ></i></button>
+                    <button style="display: none;" class="social-media-btn"><i id="whatsapp" class="fab fa-whatsapp"></i></button>
+                    <button style="display: none;" class="social-media-btn"><i id="instagram" class="fab fa-instagram"></i></button>
+                    <button formaction="https://twitter.com/share?ref_src=twsrc%5Etfw" class="social-media-btn"><i id="twitter" class="fab fa-twitter"></i></button>
+                    <button formaction="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fkk98033.github.io%2FCOVID-19-website-homework%2F&amp%3Bsrc=sdkpreparse" class="social-media-btn"><i id="facebook" class="fab fa-facebook-f"></i></button>
+                    <button formaction="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fkk98033.github.io%2FCOVID-19-website-homework%2F" class="social-media-btn"><i id="linkedin" class="fab fa-linkedin-in"></i></button>
+                </form>
+            </div>
+            <div class="link-container" id="link-container">
+                <input class="link" value="https://kk98033.github.io/COVID-19-website-homework/" id="link"></input>
+                <button class="copy-btn" id="copy-btn" onclick="Copy()">copy</button>
+            </div>
+        </div>
+    </div>
+
     <div id="overlay"></div>
     <div id="sidePageId" class="sidePage menu-item">
         <div class="dropdown responsive" onmouseover="ShowDropdown(1)" onmouseout="CloseDropdown(1)">
@@ -92,6 +115,8 @@
     </section>
 
     <section class="bottom">
+        <div style="padding-top: 10px;" class="fb-like" data-href="https://kk98033.github.io/COVID-19-website-homework/" data-width="" data-layout="button_count" data-action="like" data-size="small" data-share="true"></div>
+        
         <div id="contact_me" class="bottomText" style="padding-top: 0;"><b>Contact Me</b></div>
         <div id="bottomTextHref" class="gist">
             <a href="mailto:a8829037@gmail.com" target="blank" class="bottomText" style="display: inline; padding-right: 10px;">Email</a>
