@@ -73,3 +73,7 @@ header{
     background-position: center;
     background-repeat: no-repeat;
 }
+
+.titleBgImg{
+    background-image: url(images/world.jpg);
+}

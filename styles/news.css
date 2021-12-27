@@ -2,18 +2,43 @@
     position: relative;
     color: rgb(0, 0, 0);
     font-size: 30px;
+    border-left: 5px solid rgb(105, 10, 139);
+    border-right: 5px solid rgb(105, 10, 139);
+    border-top: 5px solid rgb(105, 10, 139);
     height: 300px;
+
+    background-color: rgb(255, 255, 255);
+    /* width: 50%; */
+}
+
+/* Vertical line */
+.vl {
+    margin: 0 10px 0 10px;
+    border-left: 5px solid rgb(42, 25, 58);
+    height: 150px;
 }
 
 .newSlides{
     display: none;
     padding: 80px;
     text-align: center;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.time{
+    width: 10%;
+    margin-right: 40px;
+    /* padding: 0; */
 }
 
 .newSlides a{
     text-decoration: none;
-    color: white;
+    color: rgb(0, 0, 0);
+
+    width: 80%;
 }
 
 .newSlides a:hover{
@@ -52,8 +77,16 @@
 
 .dotContainer{
     text-align: center;
-    padding: 20px;
+    padding: 20px 0 20px 0;
     background: rgba(37, 35, 35, 0.39);
+
+    background-color: lightblue;
+    border: 5px solid rgb(105, 10, 139);
+    /* border-left: 5px solid rgb(105, 10, 139); */
+    /* border-right: 5px solid rgb(105, 10, 139);
+    border-bottom: 5px solid rgb(105, 10, 139);
+    border-top: 5px solid lightblue; */
+    /* width: 50%; */
 }
 
 .dot{
@@ -75,9 +108,24 @@
     color: gray;
 }
 
+@media(max-width: 1100px){
+    .newsContainer{
+        overflow: scroll;
+    }
+}
+
 @media(max-width: 600px){
     .newsContainer{
         font-size: 20px;
+        height: 150px;
+    }
+
+    .vl{
+        height: 75px;
+    }
+
+    .dotContainer{
+        padding: 10px 0 10px 0;
     }
 
     .newSlides{
