@@ -247,6 +247,46 @@ h1{
 .resopnsiveBtn{
     display: none;
 }
+/* #endregion */
+
+
+/* #region Taiwan navigation bar */
+.twNaviContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.twBtn, .worldBtn{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 0 50px 10px 50px;
+}
+
+.twBtn:hover, .worldBtn:hover{
+    color: rgb(187, 187, 187);
+}
+
+.twBtn.onTaiwan{
+    color: cyan;
+}
+
+.worldBtn.onWorld{
+    color: cyan;
+}
+
+.btnLine{
+    position: absolute;
+    width: 20%;
+    height: 3px;
+    background-color: #fff;
+    /* bottom: 30px; */
+    left: 40%;
+}
+
+/* #endregion */
 
 @media(max-width: 1100px){
     /* Responsive button */
