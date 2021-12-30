@@ -61,7 +61,9 @@ h1,h2{position:relative;line-height:2;
 }
 
 h1{
-    font-size:5vw;color:#FFCA28
+    font-size:5vw;
+    /* color:#FFCA28 */
+    color: white
 }
 
 h1::after{

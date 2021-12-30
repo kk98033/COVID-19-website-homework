@@ -292,6 +292,19 @@ h1{
 
 /* #endregion */
 
+
+/* #region rickroll */
+.rickrollContainer{
+    padding: 0;
+}
+
+.rickrollImg{
+    width: 25%;
+    height: 25%;
+    padding: 30px;
+}
+/* #endregion */
+
 @media(max-width: 1100px){
     /* Responsive button */
     .normal{

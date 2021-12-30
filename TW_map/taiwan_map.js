@@ -73,6 +73,8 @@ const TaiwanMap = new Vue({
               }else{
                 document.getElementById('city' + d.properties.COUNTYCODE).style.fill = "#0051a68C";
               }
+
+              time.innerHTML = 'update time: ' + twDic['time'];
             })
             .on('click', d => {
               var twDic = JSON.parse(localStorage.getItem("twDic")); // get tw data

@@ -164,6 +164,8 @@ function loadWidget(config) {
 			text = [`快來看點影片補充點COVID-19的知識啦～`, `這些都是我精心挑選過的人類高質量影片呢(•‾⌣‾•)`]
 		} else if (location.pathname.includes("reference")) {
 			text = [`想要看我的source code嗎？(灬ºωº灬)`, `這裡面的程式碼不是我的程式碼，是“我們”的程式碼(´∀｀ゞ`]
+		} else if (location.pathname.includes("donate")) {
+			text = [`<span>Never gonna give you up Never gonna let you down~~♫♫♫</span>`, `抱歉我不是故意的(つд⊂)<span><b>那拜託幫我按個讚吧</b></span>，祝福你之後不被Rick roll`]
 		} else if (document.referrer !== "") {
 			const referrer = new URL(document.referrer),
 				domain = referrer.hostname.split(".")[1];

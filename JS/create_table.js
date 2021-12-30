@@ -14,6 +14,8 @@ function tableCreate(){
     tbl.style.textAlign = 'center';
     tbl.style.border = '1px solid black';
 
+    updateTime.innerHTML = "update time: " + worldDic['time'];
+
     var tags = ["State", "Total Cases", "New Cases", "Total Deaths", "New Deaths", "Total Recovered", "New Recovered"]
     var states = ['World', 'Asia', 'Europe', 'North_America', 'South_America', 'Africa', 'Oceania']
     for(let i = 0; i < 8; i++){
