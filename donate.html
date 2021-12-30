@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19</title>
+
+    <script src="https://kit.fontawesome.com/c480c03de3.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="styles/top_bar.css">
+    <link rel="stylesheet" href="styles/side_page.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/bottom_bar.css">
+    <link rel="stylesheet" href="styles/title_page.css">
+    <link rel="stylesheet" href="styles/toggle.css">
+    
+    <link rel="stylesheet" href="styles/parallax_style.css">
+
+    <!-- Live 2D -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+
+    <!-- Facebook like -->
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v12.0" nonce="fcdlAldR"></script>
+</head>
+<body id="body" onmousedown="CloseSideClickingOuside(event)">
+    <div class="shareBtnContainer" id="share-btn-id">
+        <button class="share-btn">
+            <i class="fas fa-share-alt"></i>
+        </button>
+        <div id="share-container" class="share-options">
+            <p class="shareTitle">share</p>
+            <div class="social-media">
+                <form>
+                    <button style="display: none;" target="blank" class="social-media-btn"><i id="folder" class="far fa-folder-open" ></i></button>
+                    <button style="display: none;" class="social-media-btn"><i id="whatsapp" class="fab fa-whatsapp"></i></button>
+                    <button style="display: none;" class="social-media-btn"><i id="instagram" class="fab fa-instagram"></i></button>
+                    <button formaction="https://twitter.com/share?ref_src=twsrc%5Etfw" class="social-media-btn"><i id="twitter" class="fab fa-twitter"></i></button>
+                    <button formaction="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fkk98033.github.io%2FCOVID-19-website-homework%2F&amp%3Bsrc=sdkpreparse" class="social-media-btn"><i id="facebook" class="fab fa-facebook-f"></i></button>
+                    <button formaction="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fkk98033.github.io%2FCOVID-19-website-homework%2F" class="social-media-btn"><i id="linkedin" class="fab fa-linkedin-in"></i></button>
+                </form>
+            </div>
+            <div class="link-container" id="link-container">
+                <input class="link" value="https://kk98033.github.io/COVID-19-website-homework/" id="link"></input>
+                <button class="copy-btn" id="copy-btn" onclick="Copy()">copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="overlay"></div>
+    <div id="sidePageId" class="sidePage menu-item">
+        <div class="dropdown responsive" onmouseover="ShowDropdown(1)" onmouseout="CloseDropdown(1)">
+                <button class="dropbtn menu-switch-language" onclick="ShowDropdown()">Language
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content" id="dropdown">
+                <a data-reload style="margin: 0; text-align: center;" href="#en" onclick="SwitchToEN()">English</a>
+                <a data-reload style="margin: 0; text-align: center;" href="#cn" onclick="SwitchToCN()">繁體中文</a>
+            </div>
+        </div>
+        <a id="about_text2" class="responsive" href="about-us.html">&#8250; 關於我們</a>
+        <a id="btn" href="javascript:void(0)" class="closeBtn" onclick="CloseSidePage()">&times;</a>
+        <a id="cdc" href="https://www.cdc.gov.tw/" target="blank">&#8250; 疾管署網站</a>
+        <a id="who" href="https://www.who.int/" target="blank">&#8250; 世界衛生組織網站</a>
+        <a id="tw_page" href="taiwan-data.html">&#8250; 臺灣確診數據</a>
+        <a id="world_page" href="world-data.html">&#8250; 世界確診數據</a>
+        <a id="vaccine_page" href="vaccine.html">&#8250; 疫苗介紹＆預約</a>
+        <a id="covid_page" href="video.html">&#8250; COVID-19相關影片</a>
+        <a id="ref_page" href="reference.html">&#8250; 參考資料</a>
+        <a id="game_page" href="game.html">&#8250; 小遊戲</a>
+    </div>
+    
+    <div id="topBar" class="topBar" style="z-index: 9999;">
+        <div class="menu-item-categories">
+            <a id="btn" style="margin-left: 25px;margin-top: 20px; margin-right: 40px; cursor: pointer;" onclick="CheckState()"><div class="bar" id="bar" style="position: fixed; margin-left: 10px;"></div></a>
+        </div>
+        <div class="menu-item-home"><a id="home_text" href="index.html">回首頁</a></div>
+        <div class="menu-item-friends"><a id="about_text" href="about-us.html">關於我們</a></div>
+        <!-- <div class="menu-item-about"><a href="donate.html">Donate</a></div> -->
+        <div class="dropdown" onmouseover="ShowDropdown(2)" onmouseout="CloseDropdown(2)">
+            <button id="language_text" class="dropbtn menu-switch-language" onclick="ShowDropdown()">切換語言
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content" id="dropdown2">
+                <a data-reload style="margin: 0; text-align: center;" href="#en" onclick="SwitchToEN()">English</a>
+                <a data-reload style="margin: 0; text-align: center;" href="#cn" onclick="SwitchToCN()">繁體中文</a>
+            </div>
+        </div>
+        <label class="switch menu-toggle-darkmode">
+            <input type="checkbox" id="toggle">
+            <span class="switchSlider round menu-toggle-darkmode"></span>
+        </label> 
+    </div>
+    
+    <div class="back-to-top">
+        <a class="backToTop" id="backToTop" href="#head">Top</a>
+    </div>
+    
+    <section class="section">
+        <div>
+            <h1>恭喜！你被Ricl roll了！</h1>
+            <h3>不想再被Rickroll嗎？</h3>
+            <h6 style="margin: 0;">&darr;&darr;&darr;那請點擊下方的喜歡&darr;&darr;&darr;</h6>
+            <div style="padding-top: 10px;" class="fb-like" data-href="https://kk98033.github.io/COVID-19-website-homework/" data-width="" data-layout="button_count" data-action="like" data-size="small" data-share="true"></div>
+        </div>
+        <img src="images/rick_roll/rickroll1.gif" alt="">
+        <img src="images/rick_roll/rickroll1.gif" alt="">
+        <img src="images/rick_roll/rickroll1.gif" alt="">
+        <img src="images/rick_roll/14.png" alt="LOL" class="rickrollImg" style="width: 50%;">
+        <div class="rickrollContainer">
+            <img src="images/rick_roll/15.jpg" alt="LOL" class="rickrollImg">
+            <img src="images/rick_roll/5.gif" alt="LOL" class="rickrollImg">
+            <Iimg src="images/rick_roll/6.gif" alt="LOL" class="rickrollImg">
+            <img src="images/rick_roll/13.gif" alt="LOL" class="rickrollImg">
+            <img src="images/rick_roll/12.gif" alt="LOL" class="rickrollImg">
+            <img src="images/rick_roll/10.gif" alt="LOL" class="rickrollImg">
+            <img src="images/rick_roll/11.gif" alt="LOL" class="rickrollImg">
+            <img src="images/rick_roll/1.gif" alt="LOL" class="rickrollImg">
+            <img src="images/rick_roll/9.jpg" alt="LOL" class="rickrollImg">
+            <img src="images/rick_roll/2.jpg" alt="LOL" class="rickrollImg">
+            <img src="images/rick_roll/3.gif" alt="LOL" class="rickrollImg">
+            <img src="images/rick_roll/4.gif" alt="LOL" class="rickrollImg">
+            <img src="images/rick_roll/7.jpg" alt="LOL" class="rickrollImg">
+            <img src="images/rick_roll/8.gif" alt="LOL" class="rickrollImg">
+            <img src="images/rick_roll/16.gif" alt="LOL" class="rickrollImg">
+            <img src="images/rick_roll/17.jpg" alt="LOL" class="rickrollImg">
+        </div>
+    </section>
+
+    <section class="bottom">
+        <div style="padding-top: 10px;" class="fb-like" data-href="https://kk98033.github.io/COVID-19-website-homework/" data-width="" data-layout="button_count" data-action="like" data-size="small" data-share="true"></div>
+        
+        <div id="contact_me" class="bottomText" style="padding-top: 0;"><b>Contact Me</b></div>
+        <div id="bottomTextHref" class="gist">
+            <a href="mailto:a8829037@gmail.com" target="blank" class="bottomText" style="display: inline; padding-right: 10px;">Email</a>
+            <a href="https://github.com/kk98033" class="bottomText" target="blank" style="display: inline; padding-right: 10px;">GitHub</a>
+            <a href="https://www.youtube.com/channel/UCubeo2tni91PwEGC22a11Kg" class="bottomText" target="blank" style="display: inline; padding-right: 10px;">YouTube</a>
+            <a href="https://steamcommunity.com/id/IddleFromTaiwan/" class="bottomText" target="blank" style="display: inline; padding-right: 10px;">Steam</a>
+        </div>
+        <div id="credit_text" class="bottomText" style="padding: 0;">所有圖片皆作為作業練習用途，均不屬於我</div>
+        <div class="bottomText">Copyright &#9400 2021 ChiaYuYang. All Rights Reserved</div>
+    </section>
+
+    <!-- Switch Language -->
+    <script src="JS/languages/languages.json"></script>
+    <script src="JS/languages/language.js"></script>
+    <script src="JS/languages/stander.js"></script>
+
+    <!-- Dark Mode -->
+    <script src="JS/dark_mode.js"></script>
+
+    <!-- Live 2D -->
+    <script src="live2d-widget-master_2/autoload.js"></script>
+
+    <!-- Parallax -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="JS/parallax.js"></script>
+
+    <!-- Stander page item -->
+    <script src="JS/side_page.js"></script>
+    <script src="JS/top_bar.js"></script>
+
+</body>
+</html>

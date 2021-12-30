@@ -61,7 +61,8 @@
 .shareBtnContainer{
     position: fixed;
     z-index: 99099;
-    top: 50%;
+    /* top: 50%; */
+    bottom: 50%;
 
     transition: 0.5s;
 }

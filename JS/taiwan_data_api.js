@@ -7,7 +7,7 @@ fetch(url, {})
 .then(res => res.json())
 .then(data => {
     const taiwanData = data[data.length-1]
-    console.log(taiwanData)
+    // console.log(taiwanData)
     twMessage = SortText(taiwanData['Confirmed'])
 
     ShowUpdateTimeText(taiwanData['Date'])
