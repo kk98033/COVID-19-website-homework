@@ -10,11 +10,17 @@ function loadJSON(callback) {
         }
     };
     xobj.send(null);  
+
+    // If user first load this website, set the lagugage to Chinese
+    if(!GetSavedLanguage()){
+        console.log('First time load');
+        localStorage.setItem("Language", 'cn');
+    }
 }
 
 function GetSavedLanguage(){
     var language = localStorage.getItem("Language");
-    console.log(language);
+    // console.log(language);
     
     return language;
 }
