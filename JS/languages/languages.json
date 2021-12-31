@@ -80,12 +80,12 @@
         "covid_vid_1_text": "Videos about COVID-19",
         "covid_vid_2_text": "Videos about Vaccine",
         "covid_vid_3_text": "Videos from CDC",
-
+        
         "video_btn_1": "COVID-19 Videos",
         "video_btn_2": "Vaccine Videos",
         "video_btn_3": "CDC videos",
         
-
+        
         "game_title_text": "Just a Simple Game",
         "game_dse": "This game should be the best EPIC AAA game in this year. However, condiering the deadline is tomorrow, this is the best I can make before the deadlind :<<br><b>Liver health -100</b></br>",
         "game_btn_1": "game 1",
@@ -96,10 +96,26 @@
         "github_text": "GitHub Link of this Website",
         "reference_text": "GitHub Link of Reference this Website Used",
         "reference_material_text": "Reference Material this Website Used",
-
+        
         "ref_btn_1": "Github Link",
         "ref_btn_2": "Reference Material GitHub Link",
         "ref_btn_3": "Reference Material Link",
+        
+        
+        "abous_title": "About Us",
+        "nam_text_1": "Name 1<br>Class: </br>",
+        "nam_text_2": "Name 2<br>Class: </br>",
+        "nam_text_3": "Name 3<br>Class: </br>",
+        
+        "des_text_1": "Description 1",
+        "des_text_2": "Description 2",
+        "des_text_3": "Description 3",
+        
+        "contact_me_text": "Contact Me",
+        "profile_des_text_1": "Name:\nClass:\nHobbit:\nSkill:",
+        "profile_des_text_2": "Name:\nClass:\nHobbit:\nSkill:",
+        "profile_des_text_3": "Name:\nClass:\nHobbit:\nSkill:",
+
         
         "contact_me": "Contact Me",
         "credit_text": "All pictures used on this website are for the homework and exercises purpose, they do not belong to me"
@@ -194,7 +210,7 @@
         
         "game_title_text": "只是一個簡單的遊戲",
         "game_dse": "這只是一個簡單的小遊戲，我本來想做一個精彩刺激又好玩的3A大作，但因為明天就是繳交期限了，我只好緊急做一個簡單的小遊戲放上來（這絕對不是某本書的範例）<br><b>Liver health -100</b></br>",
-
+        
         "game_btn_1": "遊戲一",
         "game_btn_2": "遊戲二",
         "game_btn_3": "遊戲三",
@@ -207,7 +223,22 @@
         "ref_btn_1": "GitHub連結",
         "ref_btn_2": "參考資料連結",
         "ref_btn_3": "使用的資料連結",
+        
+        
+        "abous_title": "關於我們",
+        "nam_text_1": "名字一:<br>班級:</br>",
+        "nam_text_2": "名字二:<br>班級:</br>",
+        "nam_text_3": "名字三:<br>班級:</br>",
 
+        "des_text_1": "介紹 1",
+        "des_text_2": "介紹 2",
+        "des_text_3": "介紹 3",
+
+        "contact_me_text": "聯繫方式",
+        "profile_des_text_1": "名字: 1\n班級: 1\n興趣: 111111\n專長: 111111",
+        "profile_des_text_2": "名字: 2\n班級: 2\n興趣: 222222\n專長:22222",
+        "profile_des_text_3": "名字: 3\n班級:3\n興趣: 333333\n專長:33333",
+        
         
         "contact_me": "聯繫我",
         "credit_text": "所有圖片皆作為作業練習用途，均不屬於我"

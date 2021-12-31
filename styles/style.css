@@ -139,20 +139,32 @@ h1{
 
 /* #region Profile */
 .profileContainer{
-    text-align: left;
+    /* text-align: left; */
     white-space: pre-line;
     padding-bottom: 100px;
+    margin-top: 50px;
+    width: 100%;
+
+    display: flex;
+    flex-flow: wrap;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .roundImage{
     border-radius: 20%;
     width: 30%;
-    float: right;
+    height: 30%;
+    /* width: 25%; */
+    /* float: right; */
 }
 
 .profileText{
-    margin-top: -50px;
-    width: 100px;
+    /* margin-top: -50px; */
+    /* margin-right: 200px; */
+    /* width: 100px; */
+    text-align: left;
+    margin-right: 50%;
     font-size: 30px;
 }
 
@@ -374,6 +386,14 @@ h1{
     .naviBtn{
         margin: 15px;
     }
+
+    .roundImage{
+        width: 40%;
+    }
+
+    .profileText{
+        margin-right: 100px;
+    }
 }
 
 
@@ -403,10 +423,20 @@ h1{
     
     
     /* #region Profile */
-    
+    .profileContainer{
+        /* flex-flow: row-reverse; */
+        flex-direction: column-reverse;
+    }
+
     .roundImage{
-        float: none;
+        /* float: none; */
         width: 100%;
+    }
+
+    .profileText{
+        /* margin-right: 100px; */
+        margin: 50px;
+        margin-left: 10px;
     }
     
     .socialMediaContainer a{

@@ -228,4 +228,8 @@ section .container > *{
     .title{
         font-size: 1.2rem;
     }
+
+    .downBtn{
+        top: 60%;
+    }
 }
