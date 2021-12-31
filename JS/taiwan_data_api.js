@@ -38,7 +38,7 @@ function CreateAllTwTable(taiwanData){
     tbl.style.textAlign = 'center';
     tbl.style.border = '1px solid black';
 
-    var tags = ["Country", "Confirmed", "Active", "Deaths", "Recovered"]
+    var tags = GetTagsName();
     var states = ["Taiwan", "Confirmed", "Active", "Deaths", "Recovered"]
     for(let i = 0; i < 2; i++){
         const tr = tbl.insertRow();
@@ -68,6 +68,23 @@ function CreateAllTwTable(taiwanData){
 }
 
 function ShowUpdateTimeText(date){
+    savedLanguage = GetSavedLanguage();
+
     const text = document.getElementById('updateTime');
-    text.textContent = `Update time: ` + date;
+    if(savedLanguage === 'en'){
+        text.textContent = `Update time: ` + date;
+    }else if(savedLanguage === 'cn'){
+        text.textContent = `更新時間: ` + date;
+    }
+}
+
+function GetTagsName(){
+    savedLanguage = GetSavedLanguage();
+
+    if(savedLanguage === 'en'){
+        var tags = ["Country", "Confirmed", "Active", "Deaths", "Recovered"]
+    }else if(savedLanguage === 'cn'){
+        var tags = ["國家", "確診數", "活躍數", "死亡數", "已恢復數"]
+    }
+    return tags
 }

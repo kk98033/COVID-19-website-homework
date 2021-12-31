@@ -98,7 +98,7 @@
 
     <header id="head">
         <div class="downBtn translate" data-speed="0.1"><a style="opacity: .7;" href="#section1"><i class="fas fa-chevron-down"></i></a></div>
-        <h1 class="bigTitle translate" data-speed="0.1">DAT BIG TITLE</h1>
+        <h1 id="big_title" class="bigTitle translate" data-speed="0.1">DAT BIG TITLE</h1>
 
         <div class="backgroundImg"></div>
     </header>
@@ -111,11 +111,11 @@
                 <h3 class="title">
                     <div class="border"></div>
                 </h3>
-                <p class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                    Eaque officiis quos expedita ipsa, a quidem inventore voluptates debitis 
-                    accusamus tenetur qui et voluptas dicta, culpa earum, doloribus odio consectetur 
-                    consequuntur soluta quasi nobis! Deserunt voluptatum reiciendis iure expedita 
-                    sequi quisquam laboriosam temporibus exercitationem.</p>
+                <p id="introduction" class="text" style="white-space: pre-line;">本網站主要目的為整理各式各樣關於疫情的資料，
+                    包括世界，臺灣確診數據以及關於疫苗的資訊的彙整，
+                    讓使用者可以輕鬆地在本網站取得關於疫情的資料。
+                    別忘了滑到最下方幫我們點讚喔～
+                </p>
             </div>
 
             <div class="imgContainer opacity">
@@ -137,44 +137,44 @@
             <a class="photoContainer" href="taiwan-data.html">
                 <figure class="shape">
                     <img id="tw-data" class="circleImg" src="images/DaniFace.jpg" alt="">
-                    <figcaption class="backgroundText">Taiwan Data</figcaption>
+                    <figcaption id="des_tw" class="backgroundText">Taiwan Data</figcaption>
                 </figure>
-                <div class="">Taiwan Data</div>
+                <div id="tw_data" class="">Taiwan Data</div>
             </a>
             <a class="photoContainer" href="world-data.html">
                 <figure class="shape">
                     <img id="world-data" class="circleImg" src="images/DaniFace.jpg" alt="">
-                    <figcaption class="backgroundText">World Data</figcaption>
+                    <figcaption id="des_world" class="backgroundText">World Data</figcaption>
                 </figure>
-                <div class="">World Data</div>
+                <div id="world_data" class="">World Data</div>
             </a>
             <a class="photoContainer" href="vaccine.html">
                 <figure class="shape">
                     <img id="vaccine-data" class="circleImg" src="images/DaniFace.jpg" alt="">
-                    <figcaption class="backgroundText">Vaccine</figcaption>
+                    <figcaption id="des_vaccine" class="backgroundText">Vaccine</figcaption>
                 </figure>
-                <div class="">Vaccine</div>
+                <div id="vaccine_data" class="">Vaccine</div>
             </a>
             <a class="photoContainer" href="video.html">
                 <figure class="shape">
                     <img id="video-id" class="circleImg" src="images/DaniFace.jpg" alt="">
-                    <figcaption class="backgroundText">Video</figcaption>
+                    <figcaption id="des_video" class="backgroundText">Video</figcaption>
                 </figure>
-                <div class="">Video</div>
+                <div id="video_data" class="">Video</div>
             </a>
             <a class="photoContainer" href="game.html">
                 <figure class="shape">
                     <img id="game-id" class="circleImg" src="images/DaniFace.jpg" alt="">
-                    <figcaption class="backgroundText">Game</figcaption>
+                    <figcaption id="des_game" class="backgroundText">Game</figcaption>
                 </figure>
-                <div class="">Game</div>
+                <div id="game_data" class="">Game</div>
             </a>
             <a class="photoContainer" href="reference.html">
                 <figure class="shape">
                     <img id="reference-id" class="circleImg" src="images/DaniFace.jpg" alt="">
-                    <figcaption class="backgroundText">Reference</figcaption>
+                    <figcaption id="des_ref" class="backgroundText">Reference</figcaption>
                 </figure>
-                <div class="">Reference</div>
+                <div id="ref_data" class="">Reference</div>
             </a>
         </div>
     </section>
@@ -190,13 +190,14 @@
             <a href="https://steamcommunity.com/id/IddleFromTaiwan/" class="bottomText" target="blank" style="display: inline; padding-right: 10px;">Steam</a>
         </div>
         <div id="credit_text" class="bottomText" style="padding: 0;">所有圖片皆作為作業練習用途，均不屬於我</div>
-        <div class="bottomText">Copyright &#9400 2021 ChiaYuYang. All Rights Reserved</div>
+        <a href="donate.html" class="bottomText" style="text-decoration: none;">Copyright &#9400 2021 ChiaYuYang. All Rights Reserved</a>
     </section>
 
     <!-- Switch Language -->
     <script src="JS/languages/languages.json"></script>
     <script src="JS/languages/language.js"></script>
     <script src="JS/languages/stander.js"></script>
+    <script src="JS/languages/main_page_lan.js"></script>
 
     <!-- Dark Mode -->
     <script src="JS/dark_mode.js"></script>

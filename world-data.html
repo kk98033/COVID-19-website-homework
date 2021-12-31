@@ -24,11 +24,34 @@
     <link rel="stylesheet" href="styles/search.css">
 </head>
 <body id="body" onmousedown="CloseSideClickingOuside(event)">
+    <div class="shareBtnContainer" id="share-btn-id">
+        <button class="share-btn">
+            <i class="fas fa-share-alt"></i>
+        </button>
+        <div id="share-container" class="share-options">
+            <p class="shareTitle">share</p>
+            <div class="social-media">
+                <form>
+                    <button style="display: none;" target="blank" class="social-media-btn"><i id="folder" class="far fa-folder-open" ></i></button>
+                    <button style="display: none;" class="social-media-btn"><i id="whatsapp" class="fab fa-whatsapp"></i></button>
+                    <button style="display: none;" class="social-media-btn"><i id="instagram" class="fab fa-instagram"></i></button>
+                    <button formaction="https://twitter.com/share?ref_src=twsrc%5Etfw" class="social-media-btn"><i id="twitter" class="fab fa-twitter"></i></button>
+                    <button formaction="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fkk98033.github.io%2FCOVID-19-website-homework%2F&amp%3Bsrc=sdkpreparse" class="social-media-btn"><i id="facebook" class="fab fa-facebook-f"></i></button>
+                    <button formaction="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fkk98033.github.io%2FCOVID-19-website-homework%2F" class="social-media-btn"><i id="linkedin" class="fab fa-linkedin-in"></i></button>
+                </form>
+            </div>
+            <div class="link-container" id="link-container">
+                <input class="link" value="https://kk98033.github.io/COVID-19-website-homework/" id="link"></input>
+                <button class="copy-btn" id="copy-btn" onclick="Copy()">copy</button>
+            </div>
+        </div>
+    </div>
+
     <div id="overlay"></div>
     <div id="sidePageId" class="sidePage menu-item">
         <div class="dropdown responsive" onmouseover="ShowDropdown(1)" onmouseout="CloseDropdown(1)">
-                <button class="dropbtn menu-switch-language" onclick="ShowDropdown()">Language
-              <i class="fa fa-caret-down"></i>
+            <button class="dropbtn menu-switch-language" onclick="ShowDropdown()">Language
+                <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content" id="dropdown">
                 <a data-reload style="margin: 0; text-align: center;" href="#en" onclick="SwitchToEN()">English</a>
@@ -69,13 +92,14 @@
         </label> 
     </div>
 
+    
     <div class="back-to-top">
-        <a class="backToTop" id="backToTop" href="#head">Top</a>
+        <a class="backToTop" id="backToTop" href="#section1">Top</a>
     </div>
 
     <header id="head">
         <div class="bigTitle">
-            <div>Title</div>
+            <div id="world_big_title">Title</div>
             <!-- <div class="headerUnderLine"></div> -->
             <div class="downBtn translate" data-speed="0.1"><a style="opacity: .7;" href="#section1"><i class="fas fa-chevron-down"></i></a></div>
         </div>
@@ -86,27 +110,27 @@
         <div class="shadow"></div>
         <div class="naviContaioner" style="margin-top: 0;">
             <form class="resopnsiveBtn">
-                <button formaction="taiwan-data.html" class="nextPageBtn">Prev</button>
-                <button formaction="vaccine.html" class="prePageBtn">Next</button>
+                <button formaction="taiwan-data.html" id="prev_btn2" class="nextPageBtn">Prev</button>
+                <button formaction="vaccine.html" id="next_btn2" class="prePageBtn">Next</button>
             </form>
             <form>
-                <button formaction="#section2" class="nextPageBtn normal">Prev</button>
-                <button formaction="#section2" class="naviBtn">1</button>
-                <button formaction="#section3" class="naviBtn">2</button>
-                <button formaction="#section4" class="naviBtn">3</button>
-                <button formaction="vaccine.html" class="prePageBtn normal">Next</button>
+                <button formaction="taiwan-data.html" id="prev_btn" class="nextPageBtn normal">Prev</button>
+                <button formaction="#search_title" id="btn_1" class="naviBtn">1</button>
+                <button formaction="#section2" id="btn_2" class="naviBtn">2</button>
+                <button formaction="#section3" id="btn_3" class="naviBtn">3</button>
+                <button formaction="vaccine.html" id="next_btn" class="prePageBtn normal">Next</button>
             </form>
         </div>
 
         <div class="twNaviContainer">
-            <a href="taiwan-data.html#section1" class="twBtn">Taiwan</a>
-            <a href="world-data.html#section1" class="worldBtn onWorld">World</a>
+            <a href="taiwan-data.html#section1" id="tw_page_btn" class="twBtn onTaiwan">Taiwan</a>
+            <a href="world-data.html#section1" id="world_page_btn" class="worldBtn">World</a>
         </div>
         <div class="btnLine"></div>
 
         <!--Make sure the form has the autocomplete function switched off:-->
-        <h3 class="pageTitle" style="margin: 0;">
-            <div>Search Country Data</div>
+        <h3 class="pageTitle" style="margin: 10px 0 0 0 ;">
+            <div id="search_title">Search Country Data</div>
             <!-- <div class="underLine"></div> -->
         </h3>
         <form autocomplete="off" action="javascript:CreateCountryTable()" class="textInputContainer">
@@ -123,14 +147,14 @@
     
     <section class="section" id="section2">
         <h3 class="pageTitle">
-            <div>TITLE</div>
+            <div id="states_title">TITLE</div>
             <div class="underLine"></div>
         </h3>
         <div id="worldTable"></div>
         <div id="updateTime" style="color: white; margin-top: 0;">Time</div>
     </section>
 
-    <section class="section" id="section2">
+    <section class="section" id="section3">
         <iframe src="https://ourworldindata.org/grapher/total-cases-covid-19?tab=map" width="100%" height="600px"></iframe>
     </section>
 
@@ -151,6 +175,7 @@
     <script src="JS/languages/languages.json"></script>
     <script src="JS/languages/language.js"></script>
     <script src="JS/languages/stander.js"></script>
+    <script src="JS/languages/world_page_lan.js"></script>
 
     <!-- Dark Mode -->
     <script src="JS/dark_mode.js"></script>

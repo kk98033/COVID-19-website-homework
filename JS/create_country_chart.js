@@ -59,7 +59,8 @@ function CreateTable(countryData){
     tbl.style.textAlign = 'center';
     tbl.style.border = '1px solid black';
 
-    var tags = ["Country", "Confirmed", "Active", "Deaths", "Recovered"];
+    // var tags = ["Country", "Confirmed", "Active", "Deaths", "Recovered"];
+    var tags = GetCountryTagsName();
     if(countryData){ 
         var states = OrganizeStates(countryData.Country); 
     }else{
@@ -96,4 +97,15 @@ function CreateTable(countryData){
         }
     }
     body.appendChild(tbl);
+}
+
+function GetCountryTagsName(){
+    savedLanguage = GetSavedLanguage();
+
+    if(savedLanguage === 'en'){
+        var tags = ["Country", "Confirmed", "Active", "Deaths", "Recovered"]
+    }else if(savedLanguage === 'cn'){
+        var tags = ["國家", "確診數", "活躍數", "死亡數", "已恢復數"]
+    }
+    return tags
 }

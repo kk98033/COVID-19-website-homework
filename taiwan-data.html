@@ -101,7 +101,7 @@
     
     <header id="head">
         <div class="bigTitle">
-            <div>Title</div>
+            <div id="tw_big_title">Title</div>
             <div class="downBtn translate" data-speed="0.1"><a style="opacity: .7;" href="#section1"><i class="fas fa-chevron-down"></i></a></div>
         </div>
         <div class="TWbackgroundImg"></div>
@@ -110,32 +110,32 @@
     <section class="section" id="section1">
         <div class="naviContaioner" style="margin-top: 0;">
             <form class="resopnsiveBtn">
-                <button formaction="reference.html" class="nextPageBtn">Prev</button>
-                <button formaction="world-data.html" class="prePageBtn">Next</button>
+                <button formaction="reference.html" id="prev_btn2" class="nextPageBtn">Prev</button>
+                <button formaction="world-data.html" id="next_btn2" class="prePageBtn">Next</button>
             </form>
             <form>
-                <button formaction="#section2" class="nextPageBtn normal">Prev</button>
-                <button formaction="#section2" class="naviBtn">1</button>
-                <button formaction="#section3" class="naviBtn">2</button>
-                <button formaction="#section4" class="naviBtn">3</button>
-                <button formaction="world-data.html" class="prePageBtn normal">Next</button>
+                <button formaction="reference.html" id="prev_btn" class="nextPageBtn normal">Prev</button>
+                <button formaction="#tw_cases" id="btn_1" class="naviBtn">1</button>
+                <button formaction="#tw_news" id="btn_2" class="naviBtn">2</button>
+                <button formaction="#app" id="btn_3" class="naviBtn">3</button>
+                <button formaction="world-data.html" id="next_btn" class="prePageBtn normal">Next</button>
             </form>
         </div>
 
         <div class="twNaviContainer">
-            <a href="taiwan-data.html#section1" class="twBtn onTaiwan">Taiwan</a>
-            <a href="world-data.html#section1" class="worldBtn">World</a>
+            <a href="taiwan-data.html#section1" id="tw_page_btn" class="twBtn onTaiwan">Taiwan</a>
+            <a href="world-data.html#section1" id="world_page_btn" class="worldBtn">World</a>
         </div>
         <div class="btnLine"></div>
         
         <h3 class="pageTitle">
-            <div>TITLE</div>
+            <div id="tw_cases">TITLE</div>
         </h3>
         <div id="twTable" onmouseover="ShowTwMessage()"></div>
         <div id="updateTime">Update time: </div>
 
         <h3 class="pageTitle">
-            <div>TITLE</div>
+            <div id="tw_news">TITLE</div>
             <div class="underLine"></div>
         </h3>
         <div class="shadow"></div>
@@ -221,6 +221,7 @@
     <script src="JS/languages/languages.json"></script>
     <script src="JS/languages/language.js"></script>
     <script src="JS/languages/stander.js"></script>
+    <script src="JS/languages/tw_page_lan.js"></script>
 
     <!-- Dark Mode -->
     <script src="JS/dark_mode.js"></script>
