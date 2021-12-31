@@ -93,27 +93,28 @@
     </div>
 
     <div class="back-to-top">
-        <a class="backToTop" id="backToTop" href="#head">Top</a>
+        <a class="backToTop" id="backToTop" href="#section1" onclick="showMessage('weeeeeeee~', 3000, 9);">Top</a>
     </div>
 
-    <section class="section">
+    <section class="section" id="section1">
         <div class="naviContaioner" style="margin-top: 0;">
             <form class="resopnsiveBtn">
-                <button formaction="video.html" class="nextPageBtn">Prev</button>
-                <button formaction="reference.html" class="prePageBtn">Next</button>
+                <button formaction="video.html" id="prev_btn2" class="nextPageBtn">Prev</button>
+                <button formaction="reference.html" id="next_btn2" class="prePageBtn">Next</button>
             </form>
             <form>
-                <button formaction="#section2" class="nextPageBtn normal">Prev</button>
-                <button formaction="#section2" class="naviBtn">1</button>
-                <button formaction="#section3" class="naviBtn">2</button>
-                <button formaction="#section4" class="naviBtn">3</button>
-                <button formaction="reference.html" class="prePageBtn normal">Next</button>
+                <button formaction="video.html" id="prev_btn" class="nextPageBtn normal">Prev</button>
+                <button formaction="#game_title_text" id="btn_1" class="naviBtn">1</button>
+                <button formaction="#game_title_text" id="btn_2" class="naviBtn">2</button>
+                <button formaction="#game_title_text" id="btn_3" class="naviBtn">3</button>
+                <button formaction="reference.html" id="next_btn" class="prePageBtn normal">Next</button>
             </form>
         </div>
         <div class="pageTitle">
-            <div>Title</div>
+            <div id="game_title_text">Title</div>
             <div class="underLine"></div>
         </div>
+        <div id="game_dse" style="padding-bottom: 100px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea eligendi sit officiis, rerum unde aperiam autem, quasi nulla recusandae tempore, dolores modi consectetur ut ipsum. Eum nam facilis assumenda voluptate.</div>
         <iframe src="https://i.simmer.io/@kk98033/up-to-the-heaven" style="width:960px;height:600px;border:0"></iframe>
     </section>
 
@@ -135,6 +136,7 @@
     <script src="JS/languages/languages.json"></script>
     <script src="JS/languages/language.js"></script>
     <script src="JS/languages/stander.js"></script>
+    <script src="JS/languages/games_page_lan.js"></script>
 
     <!-- Dark Mode -->
     <script src="JS/dark_mode.js"></script>

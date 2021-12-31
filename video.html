@@ -93,12 +93,12 @@
     </div>
 
     <div class="back-to-top">
-        <a class="backToTop" id="backToTop" href="#head">Top</a>
+        <a class="backToTop" id="backToTop" href="#section1" onclick="showMessage('weeeeeeee~', 3000, 9);">Top</a>
     </div>
 
     <header id="head">
         <div class="bigTitle">
-            <div>Title</div>
+            <div id="video_big_title">Title</div>
             <div class="downBtn translate" data-speed="0.1"><a style="opacity: .7;" href="#section1"><i class="fas fa-chevron-down"></i></a></div>
         </div>
         <div class="TWbackgroundImg"></div>
@@ -108,35 +108,49 @@
         <div class="shadow"></div>
         <div class="naviContaioner" style="margin-top: 0;">
             <form class="resopnsiveBtn">
-                <button formaction="vaccine.html" class="nextPageBtn">Prev</button>
-                <button formaction="game.html" class="prePageBtn">Next</button>
+                <button formaction="vaccine.html" id="prev_btn2" class="nextPageBtn">Prev</button>
+                <button formaction="game.html" id="next_btn2" class="prePageBtn">Next</button>
             </form>
             <form>
-                <button formaction="#section2" class="nextPageBtn normal">Prev</button>
-                <button formaction="#section2" class="naviBtn">1</button>
-                <button formaction="#section3" class="naviBtn">2</button>
-                <button formaction="#section4" class="naviBtn">3</button>
-                <button formaction="game.html" class="prePageBtn normal">Next</button>
+                <button formaction="vaccine.html" id="prev_btn" class="nextPageBtn normal">Prev</button>
+                <button formaction="#covid_vid_1_text" id="btn_1" class="naviBtn">1</button>
+                <button formaction="#covid_vid_2_text" id="btn_2" class="naviBtn">2</button>
+                <button formaction="#covid_vid_3_text" id="btn_3" class="naviBtn">3</button>
+                <button formaction="game.html" id="next_btn" class="prePageBtn normal">Next</button>
             </form>
         </div>
-        <h3 class="pageTitle">
-        </h3>
-        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quo cum veritatis harum consequuntur voluptates aspernatur. Natus hic facere inventore incidunt a sit optio neque alias, voluptatum rem omnis nulla?</div>
+        <!-- <h3 class="pageTitle">
+        </h3> -->
     </section>
     
     <section class="section">
         <div class="pageTitle">
-            <div>Title</div>
+            <div id="covid_vid_1_text">Title</div>
             <div class="underLine"></div>
         </div>
         <div class="videoContainer">
             <iframe width="560" height="315" class="video" src="https://www.youtube.com/embed/0ySYM4kRJVY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>            </span>
             <iframe width="560" height="315" class="video" src="https://www.youtube.com/embed/OXRTCH3jRD8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <iframe width="560" height="315" class="video" src="https://www.youtube.com/embed/OXRTCH3jRD8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <iframe width="560" height="315" class="video" src="https://www.youtube.com/embed/OXRTCH3jRD8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <iframe width="560" height="315" class="video" src="https://www.youtube.com/embed/OXRTCH3jRD8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <iframe width="560" height="315" class="video" src="https://www.youtube.com/embed/D-dsV4hZsiQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
+
+        <div class="pageTitle">
+            <div id="covid_vid_2_text">Title</div>
+            <div class="underLine"></div>
+        </div>
+        <div class="videoContainer">
+            <iframe width="560" height="315" class="video" src="https://www.youtube.com/embed/OXRTCH3jRD8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" class="video" src="https://www.youtube.com/embed/OXRTCH3jRD8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="pageTitle">
+            <div id="covid_vid_3_text">Title</div>
+            <div class="underLine"></div>
+        </div>
+        <div class="videoContainer">
+            <iframe width="560" height="315" class="video" src="https://www.youtube.com/embed/OXRTCH3jRD8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" class="video" src="https://www.youtube.com/embed/OXRTCH3jRD8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        
     </section>
 
     <section class="bottom">
@@ -157,6 +171,7 @@
     <script src="JS/languages/languages.json"></script>
     <script src="JS/languages/language.js"></script>
     <script src="JS/languages/stander.js"></script>
+    <script src="JS/languages/video_page_lan.js"></script>
 
     <!-- Dark Mode -->
     <script src="JS/dark_mode.js"></script>

@@ -23,6 +23,8 @@ function DefineMainLanguage(language, languages){
 
         big_title.innerHTML = languages.en.big_title;
         introduction.innerHTML = languages.en.introduction;
+
+        intro_title_text.innerHTML = languages.en.intro_title_text;
         
     }else if(language === 'cn'){
         tw_data.innerHTML = languages.cn.tw_page2;
@@ -41,5 +43,7 @@ function DefineMainLanguage(language, languages){
         
         big_title.innerHTML = languages.cn.big_title;
         introduction.innerHTML = languages.cn.introduction;
+
+        intro_title_text.innerHTML = languages.cn.intro_title_text;
     }
 }
