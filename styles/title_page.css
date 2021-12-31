@@ -77,3 +77,15 @@ header{
 .titleBgImg{
     background-image: url(images/world.jpg);
 }
+
+@media(max-width: 600px){
+    .bigTitle{
+        font-size: 50px;
+    }
+}
+
+@media(max-width: 400px){
+    .bigTitle{
+        font-size: 35px;
+    }
+}

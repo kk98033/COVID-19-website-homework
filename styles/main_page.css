@@ -216,8 +216,9 @@ section .container > *{
 }
 
 @media(max-width: 600px){
-    .big-title{
-        font-size: 3rem
+    .bigTitle{
+        font-size: 3rem;
+        top: 30%;
     }
 
     .text{

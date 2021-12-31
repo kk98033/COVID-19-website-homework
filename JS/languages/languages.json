@@ -9,20 +9,57 @@
         "who": "\u203A World Health Organization",
         "tw_page": "\u203A Taiwan COVID-19 Information",
         "world_page": "\u203A World COVID-19 Infromation",
-        "vaccine_page": "\u203A Vaccine Information & Reservation",
+        "vaccine_page": "\u203A Vaccine Information",
         "game_page": "\u203A Games",
         "covid_page": "\u203A Videos about COVID-19",
         "ref_page": "\u203A Reference",
 
+        "prev_btn": "prev",
+        "next_btn": "next",
+
+        
+        "tw_page2": "Taiwan COVID-19 Information",
+        "world_page2": "World COVID-19 Infromation",
+        "vaccine_page2": "Vaccine Information & Reservation",
+        "game_page2": "Games",
+        "covid_page2": "Videos about COVID-19",
+        "ref_page2": "Reference",
+        "des_tw": "latest covid-19 confirmed cases in Taiwan and news from CDC",
+        "des_world": "latest Covid-19 world & Continent confirmed cases & confirmed cases search by countries",
+        "des_vaccine": "Vaccine information & Vaccine delivery rate in Taiwan",
+        "des_video": "Videos about covid-19 information",
+        "des_game": "A game made by me before the end of the deadline(totally not inspired by computer concepts teacher)",
+        "des_ref": "Some code this website used & “OUR CODE“ (wink",
+        "introduction": "This website is mainly to orginize various of infromation about covid-19 epidemic, including world & Taiwan information. We hope users can easily find every infromation about COVID-19 epicdemic they want. Also, don't forget to scroll to the bottom to give us a like. I'll be very appreciate",
+        "big_title": "Oh shoot I can't come up with a cool name for this website :(",
+        
+        
+        "tw_page_btn": "Taiwan",
+        "world_page_btn": "World",
+        "tw_cases": "Taiwan COVID-19 confirmed cases",
+        "tw_news": "Latest News(From CDC)",
+        "Tw_btn_1": "TW confirmed cases",
+        "Tw_btn_2": "News",
+        "Tw_btn_3": "Cities confirmed cases",
+        
+        
+        "search_title": "Search COVID-19 Confirmed Cases by Countries",
+        "states_title": "World & Continent COVID-19 Confirmed Cases",
+        "world_btn_1": "Search by Country",
+        "world_btn_2": "Continent data",
+        "world_btn_3": "World Map",
+        
+        
         "contact_me": "Contact Me",
         "credit_text": "All pictures used on this website are for the homework and exercises purpose, they do not belong to me"
+        
     },
     
     "cn": {
         "language": "語言",
         "home": "回首頁",
         "about_us": "關於我們",
-
+        
         "about_text2": "\u203A 關於我們",
         "cdc": "\u203A 疾管署網站",
         "who": "\u203A 世界衛生組織網站",
@@ -32,7 +69,41 @@
         "game_page": "\u203A 小遊戲",
         "covid_page": "\u203A COVID-19 相關介紹影片",
         "ref_page": "\u203A 參考資料",
-
+        
+        "prev_btn": "上一頁",
+        "next_btn": "下一頁",
+        
+        
+        "tw_page2": "COVID-19臺灣資訊",
+        "world_page2": "COVID-19世界資訊",
+        "vaccine_page2": "疫苗資訊",
+        "game_page2": "小遊戲",
+        "covid_page2": "COVID-19 相關介紹影片",
+        "ref_page2": "參考資料",
+        "des_tw": "covid-19在臺灣的最新確診數資料＆疾管署的最新新聞",
+        "des_world": "最新的covid-19的世界＆各洲確診數資料＆確診數查詢",
+        "des_vaccine": "疫苗的介紹＆全台疫苗施打率",
+        "des_video": "關於covid-19的各種影片",
+        "des_game": "我在繳交期限前緊急製作的小遊戲（絕對不是受計概老師啟發）",
+        "des_ref": "此網頁的參考的程式碼＆”我們的“程式碼(wink",
+        "introduction": "本網站主要目的為整理各式各樣關於疫情的資料，包括世界，臺灣確診數據以及關於疫苗的資訊的彙整，讓使用者可以輕鬆地在本網站取得關於疫情的各種資料。別忘了滑到最下方幫我們點讚喔",
+        "big_title": "COVID-19 疫情資訊網",
+        
+        
+        "tw_page_btn": "臺灣資料",
+        "world_page_btn": "世界資料",
+        "tw_cases": "臺灣COVID-19確診數",
+        "tw_news": "最新新聞（來自疾管署",
+        "Tw_btn_1": "臺灣確診數",
+        "Tw_btn_2": "新聞",
+        "Tw_btn_3": "各縣市確診數",
+        
+        "search_title": "世界各國確診數查詢",
+        "states_title": "世界&世界六大洲確診數",
+        "world_btn_1": "各國查詢",
+        "world_btn_2": "各州資料",
+        "world_btn_3": "全球地圖",
+        
         "contact_me": "聯繫我",
         "credit_text": "所有圖片皆作為作業練習用途，均不屬於我"
     }

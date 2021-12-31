@@ -1,12 +1,11 @@
 loadJSON(function(json) {
     // console.log(json); // this will log out the json object
     savedLanguage = GetSavedLanguage();
-    DefineLanguage(savedLanguage, json);
+    DefineTopBarLanguage(savedLanguage, json);
 });
 
 // define language via saved language
-function DefineLanguage(language, languages){
-    // console.log(window.location.hash);
+function DefineTopBarLanguage(language, languages){
     if(language === 'en'){
         language_text.innerHTML = languages.en.language + ' <i class="fa fa-caret-down"></i>';
         home_text.innerHTML = languages.en.home;
