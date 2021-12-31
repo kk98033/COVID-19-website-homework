@@ -17,7 +17,6 @@
         "prev_btn": "prev",
         "next_btn": "next",
 
-        
         "tw_page2": "Taiwan COVID-19 Information",
         "world_page2": "World COVID-19 Infromation",
         "vaccine_page2": "Vaccine Information & Reservation",
@@ -34,6 +33,7 @@
         "big_title": "Oh shoot I can't come up with a cool name for this website :(",
         
         
+        "intro_title_text": "Features of this Website",        
         "tw_page_btn": "Taiwan",
         "world_page_btn": "World",
         "tw_cases": "Taiwan COVID-19 confirmed cases",
@@ -49,6 +49,57 @@
         "world_btn_2": "Continent data",
         "world_btn_3": "World Map",
         
+
+        "vaccine_btn_1": "Cities Vaccination Rate",
+        "vaccine_btn_2": "Total Vaccination Rate",
+        "vaccine_btn_3": "Vaccines Inforamation",
+        
+        "all_vaccine_title": "Vaccination Rate in Taiwan by Cities",
+        "chart1": "Click to get more information about the selected city",
+        "vaccine_type_title": "Vaccination Rate of Every Type of Vaccines in Taiwan",
+        "reservation_text": "Vaccine Reservation Link",
+        "vaccine_intro_title": "Information of Every Type of Vaccines in Taiwan",
+        
+        "intro_text": "Vaccine",
+        "az_title": "AstraZeneca",
+        "moderna_title": "Moderna",
+        "bnt_title": "BNT",
+        "mvc_title": "MVC",
+        
+        "az_intro_text": "",
+        "moderna_intro_text": "",    
+        "bnt_intro_text": "",
+        "mvc_intro_text": "",
+        
+        "az_overlay_text": "",
+        "moderna_overlay_text": "",
+        "bnt_overlay_text": "",
+        "mvc_overlay_text": "mvc_overlay_text",
+
+
+        "covid_vid_1_text": "Videos about COVID-19",
+        "covid_vid_2_text": "Videos about Vaccine",
+        "covid_vid_3_text": "Videos from CDC",
+
+        "video_btn_1": "COVID-19 Videos",
+        "video_btn_2": "Vaccine Videos",
+        "video_btn_3": "CDC videos",
+        
+
+        "game_title_text": "Just a Simple Game",
+        "game_dse": "This game should be the best EPIC AAA game in this year. However, condiering the deadline is tomorrow, this is the best I can make before the deadlind :<<br><b>Liver health -100</b></br>",
+        "game_btn_1": "game 1",
+        "game_btn_2": "game 2",
+        "game_btn_3": "game 3",
+        
+        
+        "github_text": "GitHub Link of this Website",
+        "reference_text": "GitHub Link of Reference this Website Used",
+        "reference_material_text": "Reference Material this Website Used",
+
+        "ref_btn_1": "Github Link",
+        "ref_btn_2": "Reference Material GitHub Link",
+        "ref_btn_3": "Reference Material Link",
         
         "contact_me": "Contact Me",
         "credit_text": "All pictures used on this website are for the homework and exercises purpose, they do not belong to me"
@@ -89,7 +140,7 @@
         "introduction": "本網站主要目的為整理各式各樣關於疫情的資料，包括世界，臺灣確診數據以及關於疫苗的資訊的彙整，讓使用者可以輕鬆地在本網站取得關於疫情的各種資料。別忘了滑到最下方幫我們點讚喔",
         "big_title": "COVID-19 疫情資訊網",
         
-        
+        "intro_title_text": "此網站功能",
         "tw_page_btn": "臺灣資料",
         "world_page_btn": "世界資料",
         "tw_cases": "臺灣COVID-19確診數",
@@ -103,6 +154,60 @@
         "world_btn_1": "各國查詢",
         "world_btn_2": "各州資料",
         "world_btn_3": "全球地圖",
+        
+        
+        "vaccine_btn_1": "各縣市疫苗施打狀況",
+        "vaccine_btn_2": "各廠牌疫苗施打率",
+        "vaccine_btn_3": "各廠牌疫苗介紹",
+        
+        "all_vaccine_title": "臺灣各縣市疫苗施打狀況",
+        "chart1": "點擊可以得到各縣市詳細施打狀況",
+        "vaccine_type_title": "臺灣內各廠牌疫苗施打率",
+        "reservation_text": "疫苗預約網址",
+        "vaccine_intro_title": "各廠牌疫苗介紹",
+        
+        "intro_text": "疫苗",
+        "az_title": "AZ",
+        "moderna_title": "莫德納",
+        "bnt_title": "BNT",
+        "mvc_title": "高端",
+        
+        "az_intro_text": "AstraZeneca 之 COVID-19 疫苗是含有 SARS-CoV-2 病毒棘蛋白(S protein)基因之非複製型腺病毒載體之疫苗，用於預防 COVID-19。本疫苗已通過WHO、歐盟等其他先進國家及我國緊急授權使用。",
+        "moderna_intro_text": "Moderna COVID-19 疫苗(Spikevax)是 SARS-CoV-2 病毒棘蛋白(S protein)之mRNA 疫苗。本疫苗目前已通過美國、歐盟及我國等先進國家緊急授權使用。",    
+        "bnt_intro_text": "BioNTech(BNT162b2) COVID-19 疫苗是含有 SARS-CoV-2 病毒棘蛋白(Sprotein)之 mRNA 疫苗，用於預防 COVID-19，本疫苗已通過 WHO、歐盟等其他先進國家及我國緊急授權使用。",
+        "mvc_intro_text": "高端新冠肺炎疫苗(MVC COVID-19 Vaccine)是含 SARS-CoV-2 重組棘蛋白的疫苗之蛋白質次單元疫苗，用於預防 COVID-19。本疫苗已通過我國核准專案製造。",
+        
+        "az_overlay_text": "常見副作用:<br>注射部位疼痛 54.2%</br>疲倦 53.1%</br>頭痛 52.6%</br>肌肉痛 44.0%</br>畏寒 31.9%<br>關節痛 26.4%</br>發燒(>38 度) 7.9%</br>",
+        "moderna_overlay_text": "常見副作用:<br>注射部位疼痛 92.0%<br>疲倦 70.0%<br>頭痛 64.7%<br>肌肉痛 61.5%<br>關節痛 46.4%<br>畏寒 45.4%<br>發燒(>38 度) 15.5%",
+        "bnt_overlay_text": "常見副作用:<br>注射部位疼痛 84.1%<br>疲倦 62.9%<br>頭痛 55.1%<br>肌肉痛 38.3%<br>畏寒 31.9%<br>關節痛 23.6%<br>發燒(>38 度) 14.2%",
+        "mvc_overlay_text": "常見副作用:<br>注射部位疼痛/壓痛 71.2%<br>痠痛/全身無力 36%<br>肌肉痛 27.6%<br>頭痛 22.2%<br>腹瀉 15.1%<br>注射部位腫脹/硬結 10.5%<br>噁心/嘔吐 7.7%<br>注射部位泛紅 4.9%<br>發燒 0.7%",
+        
+        
+        "covid_vid_1_text": "COVID-19相關影片",
+        "covid_vid_2_text": "疫苗相關影片",
+        "covid_vid_3_text": "疾管署影片",
+        
+        "video_btn_1": "COVID-19相關影片",
+        "video_btn_2": "疫苗相關影片",
+        "video_btn_3": "疾管署影片",
+        
+        
+        "game_title_text": "只是一個簡單的遊戲",
+        "game_dse": "這只是一個簡單的小遊戲，我本來想做一個精彩刺激又好玩的3A大作，但因為明天就是繳交期限了，我只好緊急做一個簡單的小遊戲放上來（這絕對不是某本書的範例）<br><b>Liver health -100</b></br>",
+
+        "game_btn_1": "遊戲一",
+        "game_btn_2": "遊戲二",
+        "game_btn_3": "遊戲三",
+        
+        
+        "github_text": "此網站的GitHub連結",
+        "reference_text": "此網站參考的資料的GitHub連結",
+        "reference_material_text": "此網頁所使用的資料",
+        
+        "ref_btn_1": "GitHub連結",
+        "ref_btn_2": "參考資料連結",
+        "ref_btn_3": "使用的資料連結",
+
         
         "contact_me": "聯繫我",
         "credit_text": "所有圖片皆作為作業練習用途，均不屬於我"

@@ -101,12 +101,12 @@
     </div>
 
     <div class="back-to-top">
-        <a class="backToTop" id="backToTop" href="#section1">Top</a>
+        <a class="backToTop" id="backToTop" href="#section1" onclick="showMessage('weeeeeeee~', 3000, 9);">Top</a>
     </div>
 
     <header id="head">
         <div class="bigTitle">
-            <div>Title</div>
+            <div id="vaccine_big_title">Title</div>
             <!-- <div class="headerUnderLine"></div> -->
             <div class="downBtn translate" data-speed="0.1"><a style="opacity: .7;" href="#section1"><i class="fas fa-chevron-down"></i></a></div>
         </div>
@@ -118,20 +118,20 @@
     
         <div class="naviContaioner" style="margin-top: 0;">
             <form class="resopnsiveBtn">
-                <button formaction="world-data.html" class="nextPageBtn">Prev</button>
-                <button formaction="video.html" class="prePageBtn">Next</button>
+                <button formaction="world-data.html" id="prev_btn2" class="nextPageBtn">Prev</button>
+                <button formaction="video.html" id="next_btn2" class="prePageBtn">Next</button>
             </form>
             <form>
-                <button formaction="#section2" class="nextPageBtn normal">Prev</button>
-                <button formaction="#section2" class="naviBtn">1</button>
-                <button formaction="#section3" class="naviBtn">2</button>
-                <button formaction="#section4" class="naviBtn">3</button>
-                <button formaction="video.html" class="prePageBtn normal">Next</button>
+                <button formaction="world-data.html" id="prev_btn" class="nextPageBtn normal">Prev</button>
+                <button formaction="#all_vaccine_title" id="btn_1" class="naviBtn">1</button>
+                <button formaction="#vaccine_type_title" id="btn_2" class="naviBtn">2</button>
+                <button formaction="#reservation_text" id="btn_3" class="naviBtn">3</button>
+                <button formaction="video.html" id="next_btn" class="prePageBtn normal">Next</button>
             </form>
         </div>
 
         <div class="pageTitle">
-            <div>Title</div>
+            <div id="all_vaccine_title">Title</div>
             <div class="underLine"></div>
         </div>
         <div id="chart1">點擊可以得到各縣市詳細資料</div>
@@ -153,7 +153,7 @@
 
     <section class="section" id="section3">
         <div class="pageTitle">
-            <div>Title</div>
+            <div id="vaccine_type_title">Title</div>
             <div class="underLine"></div>
         </div>
         <div id="updateTime2">Update time: </div>
@@ -165,12 +165,10 @@
 
     <section class="recentNews" id="section4">
         <form action="">
-            <button formaction="https://1922.gov.tw/" class="button-64" role="button"><span class="text">疫苗預約網址</span></button>
+            <button formaction="https://1922.gov.tw/" class="button-64" role="button"><span id="reservation_text" class="text">疫苗預約網址</span></button>
         </form>
         <div class="container">
-            <h2 class="information-title">
-                Recent News
-            </h2>
+            <h2 id="vaccine_intro_title" class="information-title">Recent News</h2>
             <div class="row">
                 <div class="ct-blog col-sm-6 col-md-4">
                     <div class="inner">
@@ -178,14 +176,15 @@
                             <a><img alt="News Entry" src="images/img3.png"></a>
                         </div>
                         <div class="overlay">
-                            <div class="overlayText">Hello World</div>
+                            <div id="az_overlay_text" class="overlayText">Hello World</div>
                         </div>
                         <div class="ct-blog-content">
                             <div class="ct-blog-date">
-                                <span>Vaccine</span><strong>1</strong>
+                                <strong id="az_title">1</strong>
+                                <span id="intro_text_1">Vaccine</span>
                             </div>
-                            <h3 class="ct-blog-header">
-                                WebCorpCo Will Be Visiting a Number of Upcoming Conferences
+                            <h3 id="az_intro_text" class="ct-blog-header">
+                                AZ
                             </h3>
                         </div>
                     </div>
@@ -197,14 +196,15 @@
                             <a><img alt="News Entry" src="images/img3.png"></a>
                         </div>
                         <div class="overlay">
-                            <div class="overlayText">Hello World</div>
+                            <div id="moderna_overlay_text" class="overlayText">Hello World</div>
                         </div>
                         <div class="ct-blog-content">
                             <div class="ct-blog-date">
-                                <span>Vaccine</span><strong>2</strong>
+                                <strong id="moderna_title">1</strong>
+                                <span id="intro_text_2">Vaccine</span>
                             </div>
-                            <h3 class="ct-blog-header">
-                                WebCorpCo Will Be Visiting a Number of Upcoming Conferences
+                            <h3 id="moderna_intro_text" class="ct-blog-header">
+                                Moderna
                             </h3>
                         </div>
                     </div>
@@ -216,14 +216,15 @@
                             <a><img alt="News Entry" src="images/img3.png"></a>
                         </div>
                         <div class="overlay">
-                            <div class="overlayText">Hello World</div>
+                            <div id="bnt_overlay_text" class="overlayText">Hello World</div>
                         </div>
                         <div class="ct-blog-content">
                             <div class="ct-blog-date">
-                                <span>Vaccine</span><strong>3</strong>
+                                <strong id="bnt_title">1</strong>
+                                <span id="intro_text_3">Vaccine</span>
                             </div>
-                            <h3 class="ct-blog-header">
-                                WebCorpCo Will Be Visiting a Number of Upcoming Conferences
+                            <h3 id="bnt_intro_text" class="ct-blog-header">
+                                BNT
                             </h3>
                         </div>
                     </div>
@@ -235,14 +236,15 @@
                             <a><img alt="News Entry" src="images/img3.png"></a>
                         </div>
                         <div class="overlay">
-                            <div class="overlayText">Hello World</div>
+                            <div id="mvc_overlay_text" class="overlayText">Hello World</div>
                         </div>
                         <div class="ct-blog-content">
                             <div class="ct-blog-date">
-                                <span>Vaccine</span><strong>4</strong>
+                                <strong id="mvc_title">1</strong>
+                                <span id="intro_text_4">Vaccine</span>
                             </div>
-                            <h3 class="ct-blog-header">
-                                WebCorpCo Will Be Visiting a Number of Upcoming Conferences
+                            <h3 id="mvc_intro_text" class="ct-blog-header">
+                                高端
                             </h3>
                         </div>
                     </div>
@@ -271,6 +273,7 @@
     <script src="JS/languages/languages.json"></script>
     <script src="JS/languages/language.js"></script>
     <script src="JS/languages/stander.js"></script>
+    <script src="JS/languages/vaccine_page_lan.js"></script>
 
     <!-- Dark Mode -->
     <script src="JS/dark_mode.js"></script>
@@ -338,7 +341,13 @@
                     allCityData[key] = OrgainizeCityData(key, value)
                 }else if(key === 'time'){
                     console.log(value)
-                    ShowChartText('updateTime', 'Update time: ' + value);
+
+                    savedLanguage = GetSavedLanguage();
+                    if(savedLanguage === 'en'){
+                        ShowChartText('updateTime', 'Update time: ' + value);
+                    }else if(savedLanguage === 'cn'){
+                        ShowChartText('updateTime', '更新時間: ' + value);
+                    }
                 }
             });
             console.log(totalData);
@@ -358,7 +367,12 @@
                 if(key != 'time'){
                     vacTypeData.push(OrganizeVaccineTypeData(key, value))
                 }else{
-                    ShowChartText('updateTime2', 'Update time: ' + value)
+                    savedLanguage = GetSavedLanguage()
+                    if(savedLanguage === 'en'){
+                        ShowChartText('updateTime2', 'Update time: ' + value)
+                    }else if(savedLanguage === 'cn'){
+                        ShowChartText('updateTime2', '更新時間: ' + value);
+                    }
                 }
             });
             console.log(vacTypeData);

@@ -159,7 +159,7 @@ function loadWidget(config) {
 		} else if (location.pathname.includes("vaccine")) {
 			text = [`快來看看已經有多少人打了疫苗啦~`, `偷偷告訴你，我還沒有打疫苗(°ཀ°)`]
 		} else if (location.pathname.includes("game")) {
-			text = `一個破破的unity小遊戲made by meヽ(✿ﾟ▽ﾟ)ノ`
+			text = `一個奇怪的的unity小遊戲made by meヽ(✿ﾟ▽ﾟ)ノ`
 		} else if (location.pathname.includes("video")) {
 			text = [`快來看點影片補充點COVID-19的知識啦～`, `這些都是我精心挑選過的人類高質量影片呢(•‾⌣‾•)`]
 		} else if (location.pathname.includes("reference")) {
