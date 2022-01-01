@@ -29,8 +29,8 @@
         "des_video": "Videos about covid-19 information",
         "des_game": "A game made by me before the end of the deadline(totally not inspired by computer concepts teacher)",
         "des_ref": "Some code this website used & “OUR CODE“ (wink",
-        "introduction": "This website is mainly to orginize various of infromation about covid-19 epidemic, including world & Taiwan information. We hope users can easily find every infromation about COVID-19 epicdemic they want. Also, don't forget to scroll to the bottom to give us a like. I'll be very appreciate",
-        "big_title": "Oh shoot I can't come up with a cool name for this website :(",
+        "introduction": "This website is mainly to orginize various of infromation about covid-19 epidemic, including world & Taiwan information. We hope users can easily find every infromation about COVID-19 epicdemic they want. <br><b>Also, don't forget to scroll to the bottom to give us a like. I'll be very appreciate</b></br>",
+        "big_title": "COVID-19 Information",
         
         
         "intro_title_text": "Features of this Website",        
@@ -66,15 +66,15 @@
         "bnt_title": "BNT",
         "mvc_title": "MVC",
         
-        "az_intro_text": "",
-        "moderna_intro_text": "",    
-        "bnt_intro_text": "",
-        "mvc_intro_text": "",
+        "az_intro_text": "AstraZeneca COVID-19 vaccine is a non-replicating adenovirus vector vaccine containing the SARS-CoV-2 virus spike protein (S protein) gene to prevent COVID-19.",
+        "moderna_intro_text": "Moderna COVID-19 vaccine (Spikevax) is an mRNA vaccine for SARS-CoV-2 virus spike protein (S protein).",    
+        "bnt_intro_text": "The BioNTech (BNT162b2) COVID-19 vaccine is an mRNA vaccine containing the SARS-CoV-2 virus Sprotein. It is used to prevent COVID-19.",
+        "mvc_intro_text": "MVC COVID-19 Vaccine is a protein subunit vaccine of vaccine containing SARS-CoV-2 recombinant spike protein, used to prevent COVID-19.",
         
-        "az_overlay_text": "",
-        "moderna_overlay_text": "",
-        "bnt_overlay_text": "",
-        "mvc_overlay_text": "mvc_overlay_text",
+        "az_overlay_text": "Common side effects: <br>Pain at the injection site 54.2% </br>Fatigue 53.1%</br>Headache 52.6%</br>Muscle pain 44.0%</br>Chills 31.9%<br>Arthralgia 26.4%</br>Fever (>38 degrees) 7.9%</br>",
+        "moderna_overlay_text": "Common side effects: <br>Injection site pain 92.0%<br>Tiredness 70.0%<br>Headache 64.7%<br>Muscle pain 61.5%<br>Arthralgia 46.4%<br>Chill 45.4%<br>Fever(> 38 degrees) 15.5%",
+        "bnt_overlay_text": "Common side effects: <br>Injection site pain 84.1%<br>Tiredness 62.9%<br>Headache 55.1%<br>Muscular pain 38.3%<br>Chills 31.9%<br>Arthralgia 23.6%<br>Fever(> 38 degrees) 14.2%",
+        "mvc_overlay_text": "Common side effects: <br>Pain/tenderness at the injection site 71.2%<br>Aches/systemic weakness 36%<br>Muscular pain 27.6%<br>Headache 22.2%<br>Diarrhea 15.1%<br>Swelling at the injection site/Induration 10.5 %<br>Nausea/vomiting 7.7%<br>Redness at injection site 4.9%<br>Fever 0.7%",
 
 
         "covid_vid_1_text": "Videos about COVID-19",
@@ -103,7 +103,7 @@
         
         
         "abous_title": "About Us",
-        "nam_text_1": "Name 1<br>Class: </br>",
+        "nam_text_1": "Name: Chia Yu Yang<br>Class: CSIE</br>",
         "nam_text_2": "Name 2<br>Class: </br>",
         "nam_text_3": "Name 3<br>Class: </br>",
         
@@ -112,7 +112,7 @@
         "des_text_3": "Description 3",
         
         "contact_me_text": "Contact Me",
-        "profile_des_text_1": "Name:\nClass:\nHobbit:\nSkill:",
+        "profile_des_text_1": "Name: Chia Yu Yang\nClass: CSIE\nHobbit: Playing CSGO & GTA5\nSkill: Coding(maybe)\n\n<a href='https://youtu.be/tdhGiWqS-y4' target='blank' style=' color: gray'>A Little Tips for Coding:)</a>\n\n<b style='color:cyan'>Me when I finished this homework:( &#8594;</b>",
         "profile_des_text_2": "Name:\nClass:\nHobbit:\nSkill:",
         "profile_des_text_3": "Name:\nClass:\nHobbit:\nSkill:",
 
@@ -153,7 +153,7 @@
         "des_video": "關於covid-19的各種影片",
         "des_game": "我在繳交期限前緊急製作的小遊戲（絕對不是受計概老師啟發）",
         "des_ref": "此網頁的參考的程式碼＆”我們的“程式碼(wink",
-        "introduction": "本網站主要目的為整理各式各樣關於疫情的資料，包括世界，臺灣確診數據以及關於疫苗的資訊的彙整，讓使用者可以輕鬆地在本網站取得關於疫情的各種資料。別忘了滑到最下方幫我們點讚喔",
+        "introduction": "本網站主要目的為整理各式各樣關於疫情的資料，包括世界，臺灣確診數據以及關於疫苗的資訊的彙整，讓使用者可以輕鬆地在本網站取得關於疫情的各種資料。<br><b>別忘了滑到最下方幫我們點讚喔</b></br>",
         "big_title": "COVID-19 疫情資訊網",
         
         "intro_title_text": "此網站功能",
@@ -226,7 +226,7 @@
         
         
         "abous_title": "關於我們",
-        "nam_text_1": "名字一:<br>班級:</br>",
+        "nam_text_1": "名字: 楊家宥<br>班級: 資工一乙</br>",
         "nam_text_2": "名字二:<br>班級:</br>",
         "nam_text_3": "名字三:<br>班級:</br>",
 
@@ -235,7 +235,7 @@
         "des_text_3": "介紹 3",
 
         "contact_me_text": "聯繫方式",
-        "profile_des_text_1": "名字: 1\n班級: 1\n興趣: 111111\n專長: 111111",
+        "profile_des_text_1": "名字: 楊家宥\n班級: 資工一乙\n興趣: 打CSGO和在洛聖都閒晃\n專長: 寫程式（也許)\n\n<a href='https://youtu.be/tdhGiWqS-y4' target='blank' style=' color: gray'>寫程式小技巧:)</a>\n\n<b style='color:cyan'>做完網頁時的我:( &#8594;</b>",
         "profile_des_text_2": "名字: 2\n班級: 2\n興趣: 222222\n專長:22222",
         "profile_des_text_3": "名字: 3\n班級:3\n興趣: 333333\n專長:33333",
         

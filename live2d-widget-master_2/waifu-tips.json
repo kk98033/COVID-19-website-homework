@@ -189,6 +189,9 @@
 		"selector": ".bottomText",
 		"text": ["偷偷告訴你，這句只是用來裝酷的。"]
 	}, {
+		"selector": "#share-container",
+		"text": ["點擊<span>copy</span>即可複製網址呦～", "你應該也發現了，只有分享到<span>Twitter</span>的按鈕有用，但我還是要把他們留著，這樣看起來比較專業"]
+	}, {
 		"selector": "input.vnick",
 		"text": ["該怎麼稱呼你呢？", "留下你的尊姓大名！"]
 	}, {
