@@ -26,7 +26,7 @@ window.addEventListener('scroll', () => {
 
     opacity.forEach(element => {
         element.style.opacity = scroll / (sectionY.top + sectionHeight);
-    })
+    })    
 
     bigTitle.style.opacity = - scroll / (headerHeight / 2) + 1;
     downBtn.style.opacity = - scroll / (headerHeight / 2) + 1;

@@ -63,7 +63,7 @@ h1{
     position: absolute;
     width: 50%;
     height: 3px;
-    background-color: #fff;
+    background-color: rgb(172, 172, 172);
     /* bottom: 30px; */
     left: 25%;
 }
@@ -74,7 +74,7 @@ h1{
 
     font-size: 50px;
     text-align: center;
-    color: rgb(0, 255, 255);
+    color: rgb(55, 175, 255);
 }
 
 /* #region Circle Image */
@@ -146,7 +146,7 @@ h1{
     width: 100%;
 
     display: flex;
-    flex-flow: wrap;
+    flex-flow: nowrap;
     flex-direction: row;
     justify-content: center;
 }
@@ -164,8 +164,8 @@ h1{
     /* margin-right: 200px; */
     /* width: 100px; */
     text-align: left;
-    margin-right: 50%;
-    font-size: 30px;
+    margin-right: 100px;
+    font-size: 25px;
 }
 
 .socialMediaContainer{
@@ -392,7 +392,8 @@ h1{
     }
 
     .profileText{
-        margin-right: 100px;
+        margin-right: 45px;
+        font-size: 20px;
     }
 }
 
@@ -435,6 +436,7 @@ h1{
 
     .profileText{
         /* margin-right: 100px; */
+        font-size: 20px;
         margin: 50px;
         margin-left: 10px;
     }
@@ -505,6 +507,11 @@ h1{
         overflow-y: scroll;
         font-size: 30px;
     }
+
+    .underLine{
+        left: 15%;
+        width: 70%;
+    }
 }
 
 @media(max-width: 400px){
@@ -524,5 +531,10 @@ h1{
     .pageTitle{
         overflow-y: scroll;
         font-size: 20px;
+    }
+
+    .backgroundText{
+        padding-top: 30px;
+        font-size: 15px;
     }
 }

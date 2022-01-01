@@ -67,11 +67,19 @@ header{
 }
 
 .TWbackgroundImg{
-    background-image: url(images/img2.jpg);
+    background-image: url(images/tw_page.jpeg);
     height: 100%;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.vaccineBgImg{
+    background-image: url(images/vaccine_page.jpeg);
+}
+
+.videoBgImg{
+    background-image: url(images/video_page.jpeg);
 }
 
 .titleBgImg{
