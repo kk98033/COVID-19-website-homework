@@ -18,6 +18,8 @@ function DefineGameLanguage(language, languages){
         
         game_title_text.innerHTML = languages.en.game_title_text;
         game_dse.innerHTML = languages.en.game_dse;
+
+        game_warning_text.innerHTML = languages.en.game_warning_text;
         
     }else if(language === 'cn'){
         prev_btn.innerHTML = languages.cn.prev_btn;
@@ -31,5 +33,7 @@ function DefineGameLanguage(language, languages){
         
         game_title_text.innerHTML = languages.cn.game_title_text;
         game_dse.innerHTML = languages.cn.game_dse;
+
+        game_warning_text.innerHTML = languages.cn.game_warning_text;
     }
 }

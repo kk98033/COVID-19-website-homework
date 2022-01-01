@@ -91,6 +91,7 @@
         "game_btn_1": "game 1",
         "game_btn_2": "game 2",
         "game_btn_3": "game 3",
+        "game_warning_text": "<span style='color:red'>Please Use Computer with Keyboard to Play This Game!</span>",
         
         
         "github_text": "GitHub Link of this Website",
@@ -115,7 +116,7 @@
         "profile_des_text_1": "Name: Chia Yu Yang\nClass: CSIE\nHobbit: Playing CSGO & GTA5\nSkill: Coding(maybe)\n\n<a href='https://youtu.be/tdhGiWqS-y4' target='blank' style=' color: gray'>A Little Tips for Coding:)</a>\n\n<b style='color:cyan'>Me when I finished this homework:( &#8594;</b>",
         "profile_des_text_2": "Name:\nClass:\nHobbit:\nSkill:",
         "profile_des_text_3": "Name:\nClass:\nHobbit:\nSkill:",
-
+        
         
         "contact_me": "Contact Me",
         "credit_text": "All pictures used on this website are for the homework and exercises purpose, they do not belong to me"
@@ -214,6 +215,7 @@
         "game_btn_1": "遊戲一",
         "game_btn_2": "遊戲二",
         "game_btn_3": "遊戲三",
+        "game_warning_text": "<span style='color:red;'>請用電腦來玩!</span>",
         
         
         "github_text": "此網站的GitHub連結",
