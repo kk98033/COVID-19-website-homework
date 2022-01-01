@@ -105,17 +105,17 @@
         
         "abous_title": "About Us",
         "nam_text_1": "Name: Chia Yu Yang<br>Class: CSIE</br>",
-        "nam_text_2": "Name 2<br>Class: </br>",
-        "nam_text_3": "Name 3<br>Class: </br>",
+        "nam_text_2": "Name: 李柏叡<br>Class: CSIE</br>",
+        "nam_text_3": "Name 康家豪<br>Class: CSIE</br>",
         
-        "des_text_1": "Description 1",
-        "des_text_2": "Description 2",
-        "des_text_3": "Description 3",
+        "des_text_1": "負責工作：程式碼編寫",
+        "des_text_2": "負責工作：資料收集, PPT",
+        "des_text_3": "負責工作：版面設計, PPT",
         
         "contact_me_text": "Contact Me",
         "profile_des_text_1": "Name: Chia Yu Yang\nClass: CSIE\nHobbit: Playing CSGO & GTA5\nSkill: Coding(maybe)\n\n<a href='https://youtu.be/tdhGiWqS-y4' target='blank' style=' color: gray'>A Little Tips for Coding:)</a>\n\n<b style='color:cyan'>Me when I finished this homework:( &#8594;</b>",
-        "profile_des_text_2": "Name:\nClass:\nHobbit:\nSkill:",
-        "profile_des_text_3": "Name:\nClass:\nHobbit:\nSkill:",
+        "profile_des_text_2": "Name: 李柏叡\nClass: CSIE",
+        "profile_des_text_3": "Name: 康家豪\nClass: CSIE",
         
         
         "contact_me": "Contact Me",
@@ -229,17 +229,17 @@
         
         "abous_title": "關於我們",
         "nam_text_1": "名字: 楊家宥<br>班級: 資工一乙</br>",
-        "nam_text_2": "名字二:<br>班級:</br>",
-        "nam_text_3": "名字三:<br>班級:</br>",
+        "nam_text_2": "名字: 李柏叡<br>班級: 資工一乙</br>",
+        "nam_text_3": "名字: 康家豪<br>班級: 資工一乙</br>",
 
-        "des_text_1": "介紹 1",
-        "des_text_2": "介紹 2",
-        "des_text_3": "介紹 3",
+        "des_text_1": "負責工作：程式碼編寫",
+        "des_text_2": "負責工作：資料收集, PPT",
+        "des_text_3": "負責工作：版面設計, PPT",
 
         "contact_me_text": "聯繫方式",
         "profile_des_text_1": "名字: 楊家宥\n班級: 資工一乙\n興趣: 打CSGO和在洛聖都閒晃\n專長: 寫程式（也許)\n\n<a href='https://youtu.be/tdhGiWqS-y4' target='blank' style=' color: gray'>寫程式小技巧:)</a>\n\n<b style='color:cyan'>做完網頁時的我:( &#8594;</b>",
-        "profile_des_text_2": "名字: 2\n班級: 2\n興趣: 222222\n專長:22222",
-        "profile_des_text_3": "名字: 3\n班級:3\n興趣: 333333\n專長:33333",
+        "profile_des_text_2": "名字: 李柏叡\n班級: 資工一乙\n",
+        "profile_des_text_3": "名字: 康家豪\n班級: 資工一乙\n",
         
         
         "contact_me": "聯繫我",
