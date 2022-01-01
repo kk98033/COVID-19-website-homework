@@ -365,6 +365,10 @@ h1{
     background: none;
 }
 
+#game_warning_text{
+    display: none;
+}
+
 @media (min-width: 768px) {
   .button-64 {
     font-size: 24px;
@@ -394,6 +398,14 @@ h1{
     .profileText{
         margin-right: 45px;
         font-size: 20px;
+    }
+
+    #game_warning_text{
+        display: block;
+    }
+
+    #game_section{
+        overflow: scroll;
     }
 }
 
