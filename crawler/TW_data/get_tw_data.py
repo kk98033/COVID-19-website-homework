@@ -80,6 +80,74 @@ class GetWorldData():
         ref = db.reference("/World_Data")
         ref.set(data['World_Data'])
 
+class NewTwDataCrawaler():
+    def __init__(self) -> None:
+        ''' Crawler '''
+        # https://nidss.cdc.gov.tw/nndss/DiseaseMap?id=19CoV # old
+        # https://sites.google.com/cdc.gov.tw/2019ncov/taiwan # new
+        self.path = "crawler/chrome_driver/chromedriver"
+        # self.targetPath = 'https://nidss.cdc.gov.tw/nndss/DiseaseMap?id=19CoV' # old
+        self.targetPath = 'https://sites.google.com/cdc.gov.tw/2019ncov/taiwan' # new
+        
+        self.driver = webdriver.Chrome(self.path)
+
+    def Crawler(self):
+        self.driver.get(self.targetPath)
+
+        # Load the page fully before crawler >:(
+        time.sleep(5) # I HATE U
+
+        frame = self.driver.find_element(By.XPATH,'//*[@id="6c0f09ca37e6ef5f_8"]')
+        self.driver.switch_to.frame(frame)
+        innerFrame = self.driver.find_element(By.XPATH, '//*[@id="innerFrame"]')
+        self.driver.switch_to.frame(innerFrame)
+        table = self.driver.find_element(By.ID, 'sheets-viewport')
+        sheet = table.find_element(By.XPATH, '//*[@id="984518108"]/div/table/tbody')
+        elements = sheet.find_elements(By.TAG_NAME, 'tr')
+
+        return elements
+
+    def SortData(self, elements, currentTime):
+        cases = {'TW_data':{}}
+        dataList = []
+
+        for i in elements:
+            data = i.text.split(' ')
+            if data:
+                dataList.append(data)
+        # print(dataList)
+
+        for data in dataList[1:-3]:
+            # data = i.split(' ')
+            city, amount = self.GetData(data)
+            city = self.CheckCityName(city)
+
+            cases['TW_data'][city] = amount
+        # print(cases['TW_data'])
+
+        locTime = time.localtime()
+        cases['TW_data']["time"] = f'{locTime[0]}-{locTime[1]}-{locTime[2]}-{locTime[3]}:{locTime[4]}:{locTime[5]}'
+        cases['TW_data']["time"] = currentTime
+        # print(cases['TW_data'])
+
+        return cases
+
+    def CheckCityName(self, cityName):
+        if '台' in cityName:
+            cityName = cityName.replace('台', '臺')
+        return cityName
+
+    def GetData(self, data):
+        # print(data)
+        if len(data) == 4:
+            return data[1], data[2]
+        return data[0], data[1]
+
+    def PushToFirebase(self, data):
+        ''' Store data to firebase '''
+        ref = db.reference("/TW_data")
+        ref.set(data['TW_data'])
+
 class TwData():
     def __init__(self) -> None:
         ''' Crawler '''
@@ -256,7 +324,15 @@ if __name__ == "__main__":
     ''' get current time '''
     currentTime = GetCurrentTime()
 
-    twCrawler = TwData()
+    ''' Old Tw data'''
+    # twCrawler = TwData()
+    # twData = twCrawler.Crawler()
+    # twData = twCrawler.SortData(twData, currentTime)
+    # print(twData)
+    # twCrawler.PushToFirebase(twData)
+
+    ''' New Tw data'''
+    twCrawler = NewTwDataCrawaler()
     twData = twCrawler.Crawler()
     twData = twCrawler.SortData(twData, currentTime)
     print(twData)
