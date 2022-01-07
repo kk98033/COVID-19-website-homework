@@ -1,4 +1,5 @@
 ''' Use Python 3.9.2 '''
+''' Chrome driver version: 97.0.4692.71'''
 
 from selenium import webdriver
 from selenium.webdriver.common import by
